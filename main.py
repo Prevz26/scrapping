@@ -17,7 +17,7 @@ from urllib.parse import urljoin
 INSTAGRAM_USERNAME = "jugganuts5"
 INSTAGRAM_PASSWORD = "Prevz1135"
 
-os.environ["PATH"] += r"C:/seleniumdriver"
+os.environ["PATH"] += ":/usr/local/bin"
 # --- Logging Setup ---
 logging.basicConfig(
     level=logging.INFO,
