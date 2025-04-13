@@ -1,0 +1,119 @@
+2025-04-13 16:20:47,718 - INFO - Setting up Chrome WebDriver...
+2025-04-13 16:21:04,430 - INFO - WebDriver setup complete.
+2025-04-13 16:21:13,974 - INFO - Cookies loaded successfully
+2025-04-13 16:21:17,841 - INFO - Not logged in, login form detected.
+2025-04-13 16:21:17,841 - INFO - No valid session found. Performing standard login...
+2025-04-13 16:21:17,844 - INFO - Navigating to login page: https://www.instagram.com/accounts/login/
+2025-04-13 16:21:22,239 - INFO - Entering login credentials...
+2025-04-13 16:21:26,446 - INFO - Login submitted. Waiting for response...
+2025-04-13 16:21:29,705 - INFO - Saved screenshot of post-login screen
+2025-04-13 16:21:38,492 - INFO - Checking for 2FA requirements...
+2025-04-13 16:21:42,271 - INFO - Saved screenshot of current screen as 2fa_detection_screen.png
+2025-04-13 16:21:47,375 - INFO - 2FA screen detected!
+2025-04-13 16:22:04,119 - INFO - Searching for input field...
+2025-04-13 16:22:04,158 - INFO - Found potential verification input field
+2025-04-13 16:22:05,285 - INFO - Entered verification code
+2025-04-13 16:22:10,515 - INFO - Found 0 buttons on the page
+2025-04-13 16:22:10,518 - INFO - Trying to find button with selector: //button[contains(text(), 'Confirm')]
+2025-04-13 16:22:15,620 - INFO - Trying to find button with selector: //button[contains(text(), 'Submit')]
+2025-04-13 16:22:20,659 - INFO - Trying to find button with selector: //button[contains(text(), 'Verify')]
+2025-04-13 16:22:25,677 - INFO - Trying to find button with selector: //button[contains(text(), 'Next')]
+2025-04-13 16:22:30,736 - INFO - Trying to find button with selector: //button[contains(text(), 'Continue')]
+2025-04-13 16:22:35,781 - INFO - Trying to find button with selector: //button[contains(., 'Confirm')]
+2025-04-13 16:22:41,109 - INFO - Trying to find button with selector: //button[contains(., 'Submit')]
+2025-04-13 16:22:46,357 - INFO - Trying to find button with selector: //button[contains(., 'Verify')]
+2025-04-13 16:22:51,426 - INFO - Trying to find button with selector: //button[contains(., 'Next')]
+2025-04-13 16:22:57,011 - INFO - Trying to find button with selector: //button[contains(., 'Continue')]
+2025-04-13 16:23:02,113 - INFO - Trying to find button with selector: //button[contains(@class, 'submit')]
+2025-04-13 16:23:07,263 - INFO - Trying to find button with selector: //button[contains(@class, 'confirm')]
+2025-04-13 16:23:13,051 - INFO - Trying to find button with selector: //button[contains(@class, 'verify')]
+2025-04-13 16:23:18,246 - INFO - Trying to find button with selector: //button[contains(@class, 'primary')]
+2025-04-13 16:23:23,259 - INFO - Trying to find button with selector: //button[contains(@class, 'next')]
+2025-04-13 16:23:28,271 - INFO - Trying to find button with selector: //div[contains(@role, 'button')][contains(., 'Next')]
+2025-04-13 16:23:33,340 - INFO - Trying to find button with selector: //div[contains(@role, 'button')][contains(., 'Confirm')]
+2025-04-13 16:23:38,351 - INFO - Trying to find button with selector: //div[contains(@role, 'button')][contains(., 'Continue')]
+2025-04-13 16:23:38,384 - INFO - Found 1 matching buttons
+2025-04-13 16:23:38,753 - INFO - About to click button with text: 'Continue'
+2025-04-13 16:23:40,010 - INFO - Successfully clicked verification button
+2025-04-13 16:23:46,565 - WARNING - Still appears to be on verification screen after submitting code.
+2025-04-13 16:23:58,471 - INFO - Continuing after manual verification
+2025-04-13 16:24:09,051 - WARNING - Could not confirm successful login by finding Home element.
+2025-04-13 16:24:24,834 - INFO - Popup 1 not found or timed out.
+2025-04-13 16:24:24,859 - INFO - Cookies saved to instagram_cookies.pkl
+2025-04-13 16:24:24,859 - INFO - Login process complete.
+2025-04-13 16:24:26,871 - INFO - Navigating to target page: https://www.instagram.com/explore/tags/pythonprogramming/
+2025-04-13 16:24:37,561 - INFO - Starting scroll process. Target: 50 URLs or 20 scrolls.
+2025-04-13 16:24:38,905 - INFO - Scroll attempt 1/20. Pausing for 3.5s...
+2025-04-13 16:24:55,578 - INFO - Found URL (1/50): https://www.instagram.com/p/DHieUiTglXx/
+2025-04-13 16:24:55,603 - INFO - Found URL (2/50): https://www.instagram.com/p/DGK65e-RemX/
+2025-04-13 16:24:55,621 - INFO - Found URL (3/50): https://www.instagram.com/p/DFLI1urxcdX/
+2025-04-13 16:24:55,641 - INFO - Found URL (4/50): https://www.instagram.com/p/DH_oCvQz0fT/
+2025-04-13 16:24:55,671 - INFO - Found URL (5/50): https://www.instagram.com/p/DE8AGCPq8vy/
+2025-04-13 16:24:55,742 - INFO - Found URL (6/50): https://www.instagram.com/p/DF4GtnAoyUI/
+2025-04-13 16:24:55,768 - INFO - Found URL (7/50): https://www.instagram.com/p/DFRIscGtYa6/
+2025-04-13 16:24:55,811 - INFO - Found URL (8/50): https://www.instagram.com/p/DFpA81GTrJb/
+2025-04-13 16:24:55,841 - INFO - Found URL (9/50): https://www.instagram.com/p/DF_519GCZUG/
+2025-04-13 16:24:55,871 - INFO - Found URL (10/50): https://www.instagram.com/p/C6gc-AqNeWt/
+2025-04-13 16:24:55,895 - INFO - Found URL (11/50): https://www.instagram.com/p/DFFaKSaNp5h/
+2025-04-13 16:24:56,069 - INFO - Found URL (12/50): https://www.instagram.com/p/DIDdj4hzLdW/
+2025-04-13 16:24:56,206 - INFO - Found URL (13/50): https://www.instagram.com/p/DHKmKe6MLTp/
+2025-04-13 16:24:56,236 - INFO - Found URL (14/50): https://www.instagram.com/p/DGF_jOMv01-/
+2025-04-13 16:24:56,261 - INFO - Found URL (15/50): https://www.instagram.com/p/DE0l20mJ9T2/
+2025-04-13 16:24:56,287 - INFO - Found URL (16/50): https://www.instagram.com/p/DHNAGKRzytH/
+2025-04-13 16:24:56,306 - INFO - Found URL (17/50): https://www.instagram.com/p/DH2ciCUTlEv/
+2025-04-13 16:24:56,335 - INFO - Found URL (18/50): https://www.instagram.com/p/DGH4rECxcyg/
+2025-04-13 16:24:56,355 - INFO - Found URL (19/50): https://www.instagram.com/p/DGwxjJWiVuQ/
+2025-04-13 16:24:56,381 - INFO - Found URL (20/50): https://www.instagram.com/p/DG5WHsRRi5e/
+2025-04-13 16:24:56,404 - INFO - Found URL (21/50): https://www.instagram.com/p/DG6OH-UqErv/
+2025-04-13 16:24:56,433 - INFO - Found URL (22/50): https://www.instagram.com/p/DHMzSrsyFDa/
+2025-04-13 16:24:56,455 - INFO - Found URL (23/50): https://www.instagram.com/p/DFDdA4yzfja/
+2025-04-13 16:24:56,485 - INFO - Found URL (24/50): https://www.instagram.com/p/DHYmCJkNt79/
+2025-04-13 16:24:56,513 - INFO - Found URL (25/50): https://www.instagram.com/p/DFKsfFksqZ2/
+2025-04-13 16:24:56,541 - INFO - Found URL (26/50): https://www.instagram.com/p/DG0mk9cvcb4/
+2025-04-13 16:24:56,561 - INFO - Found URL (27/50): https://www.instagram.com/p/DFSZSnCPUST/
+2025-04-13 16:24:56,589 - INFO - Found URL (28/50): https://www.instagram.com/p/C7eGUrRPfJf/
+2025-04-13 16:24:56,608 - INFO - Found URL (29/50): https://www.instagram.com/p/DGPge6UtT8R/
+2025-04-13 16:24:56,628 - INFO - Found URL (30/50): https://www.instagram.com/p/DHIL8mjTQyT/
+2025-04-13 16:24:56,650 - INFO - Found URL (31/50): https://www.instagram.com/p/C-Ihs91SKZ6/
+2025-04-13 16:24:56,672 - INFO - Found URL (32/50): https://www.instagram.com/p/DHBOhrIz1ba/
+2025-04-13 16:24:56,690 - INFO - Found URL (33/50): https://www.instagram.com/p/DCl1AaWtur_/
+2025-04-13 16:24:56,726 - INFO - Found URL (34/50): https://www.instagram.com/p/DII-G_HTaMJ/
+2025-04-13 16:24:56,754 - INFO - Found URL (35/50): https://www.instagram.com/p/DEwyfsbvV_E/
+2025-04-13 16:24:56,770 - INFO - Found URL (36/50): https://www.instagram.com/p/DF2lYueT0L-/
+2025-04-13 16:24:56,795 - INFO - Found URL (37/50): https://www.instagram.com/p/DGHbys3ziBD/
+2025-04-13 16:24:56,815 - INFO - Found URL (38/50): https://www.instagram.com/p/DFzhl9yxbEq/
+2025-04-13 16:24:56,835 - INFO - Found URL (39/50): https://www.instagram.com/p/DHoAeTdsDe5/
+2025-04-13 16:24:56,854 - INFO - Found URL (40/50): https://www.instagram.com/p/DGYklUZBu7v/
+2025-04-13 16:24:56,875 - INFO - Found URL (41/50): https://www.instagram.com/p/DE60QO7NoSr/
+2025-04-13 16:24:56,892 - INFO - Found URL (42/50): https://www.instagram.com/p/DFCZH3ZJJC1/
+2025-04-13 16:24:57,239 - INFO - Scroll attempt 2/20. Pausing for 3.5s...
+2025-04-13 16:25:01,810 - INFO - Found URL (43/50): https://www.instagram.com/p/DGlFTvJPdRg/
+2025-04-13 16:25:01,833 - INFO - Found URL (44/50): https://www.instagram.com/p/DGno7ivI_Fj/
+2025-04-13 16:25:01,858 - INFO - Found URL (45/50): https://www.instagram.com/p/DHgB9sOtGb5/
+2025-04-13 16:25:01,895 - INFO - Found URL (46/50): https://www.instagram.com/p/DEuW6iVMr71/
+2025-04-13 16:25:01,939 - INFO - Found URL (47/50): https://www.instagram.com/p/DIAYrIZIDS7/
+2025-04-13 16:25:01,958 - INFO - Found URL (48/50): https://www.instagram.com/p/DHFu0hBTP2D/
+2025-04-13 16:25:01,985 - INFO - Found URL (49/50): https://www.instagram.com/p/DFyLbXyqjpS/
+2025-04-13 16:25:02,004 - INFO - Found URL (50/50): https://www.instagram.com/p/DHfPQWMTBho/
+2025-04-13 16:25:02,022 - INFO - Found URL (51/50): https://www.instagram.com/p/DHckw_uIKcn/
+2025-04-13 16:25:02,043 - INFO - Found URL (52/50): https://www.instagram.com/p/DBvL6pttSaK/
+2025-04-13 16:25:02,066 - INFO - Found URL (53/50): https://www.instagram.com/p/DHQ4Ad5vVBV/
+2025-04-13 16:25:02,086 - INFO - Found URL (54/50): https://www.instagram.com/p/DGAz6CpP0D-/
+2025-04-13 16:25:02,110 - INFO - Found URL (55/50): https://www.instagram.com/p/DH981FUTQ77/
+2025-04-13 16:25:02,128 - INFO - Found URL (56/50): https://www.instagram.com/p/DE7QpxnSUXw/
+2025-04-13 16:25:02,155 - INFO - Found URL (57/50): https://www.instagram.com/p/DGntd_lBetJ/
+2025-04-13 16:25:02,185 - INFO - Found URL (58/50): https://www.instagram.com/p/DIMM_0WSjbo/
+2025-04-13 16:25:02,207 - INFO - Found URL (59/50): https://www.instagram.com/p/DE1eQRCpKrC/
+2025-04-13 16:25:02,223 - INFO - Found URL (60/50): https://www.instagram.com/p/DExB5FAsZP-/
+2025-04-13 16:25:02,254 - INFO - Found URL (61/50): https://www.instagram.com/p/DE-UkYPz6ta/
+2025-04-13 16:25:02,290 - INFO - Found URL (62/50): https://www.instagram.com/p/DHtAm6doZal/
+2025-04-13 16:25:02,324 - INFO - Found URL (63/50): https://www.instagram.com/p/DF7mkEKNjAJ/
+2025-04-13 16:25:02,354 - INFO - Found URL (64/50): https://www.instagram.com/p/DIYs-ULtVhq/
+2025-04-13 16:25:02,388 - INFO - Found URL (65/50): https://www.instagram.com/p/DGC6JBHTa8e/
+2025-04-13 16:25:02,416 - INFO - Found URL (66/50): https://www.instagram.com/p/DFDphpGTKI_/
+2025-04-13 16:25:02,630 - INFO - Reached target number of URLs (50). Stopping scroll.
+2025-04-13 16:25:02,632 - INFO - Found a total of 66 unique post URLs.
+2025-04-13 16:25:02,633 - INFO - 
+--- Collected Post URLs ---
+2025-04-13 16:25:02,714 - INFO - --------------------------
+2025-04-13 16:25:02,716 - INFO - Closing WebDriver.
