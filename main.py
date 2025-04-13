@@ -14,12 +14,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from urllib.parse import urljoin
 
-# --- Configuration ---
-# !! IMPORTANT: Use environment variables or a secure config file in real applications !!
 INSTAGRAM_USERNAME = "jugganuts5"
 INSTAGRAM_PASSWORD = "Prevz1135"
 
-os.environ["PATH"] += r"C:/seleniumdriver"
+os.environ["PATH"] += ":/usr/local/bin"
 # --- Logging Setup ---
 logging.basicConfig(
     level=logging.INFO,
@@ -200,16 +198,16 @@ def check_login_status(driver):
         return False
 
 
-# Modified handle_2fa function with better detection methods
+
 def handle_2fa(driver):
     """
-    Handle two-factor authentication with enhanced button detection.
+    Handle two-factor authentication.
     """
     logger.info("Checking for 2FA requirements...")
     
     try:
         # Wait to see if we land on any 2FA-related page
-        time.sleep(3)  # Give page time to load fully
+        time.sleep(3)  
         
         # Take a screenshot to help debug
         try:
@@ -254,7 +252,7 @@ def handle_2fa(driver):
             logger.info("2FA screen detected!")
             
             # Ask user for the code
-            security_code = input("\n⚠️ INSTAGRAM SECURITY CHECK: Enter the verification code sent to your email/phone: ")
+            security_code = input("\n INSTAGRAM SECURITY CHECK: Enter the verification code sent to your email: ")
             
             # Try to find the verification input field
             input_field = None
