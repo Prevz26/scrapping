@@ -29,8 +29,111 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# --- Choose Target Page Type ---
-TARGET_PAGE_URL = "https://www.instagram.com/cristiano/reels/?hl=en"
+# --- Scraping Mode Selection ---
+def select_scraping_mode():
+    while True:
+        print("\n=== Instagram Reels Scraper ===")
+        print("1. Scrape reels from a single user")
+        print("2. Scrape reels from multiple users (from a text file)")
+        print("3. Exit")
+        
+        choice = input("\nSelect an option (1-3): ").strip()
+        
+        if choice == "1":
+            return "single"
+        elif choice == "2":
+            return "bulk"
+        elif choice == "3":
+            print("\nGoodbye!")
+            sys.exit(0)
+        else:
+            print("\nInvalid choice. Please select 1, 2, or 3.")
+
+# --- Get Target Username ---
+def get_target_username():
+    while True:
+        username = input("\nEnter the Instagram username to scrape reels from: ").strip()
+        if username:
+            return username
+        print("Username cannot be empty. Please try again.")
+
+# --- Get Usernames File ---
+def get_usernames_file():
+    while True:
+        file_path = input("\nEnter the path to your usernames file (or 'back' to return to menu): ").strip()
+        
+        if file_path.lower() == 'back':
+            return None
+            
+        if not file_path:
+            print("File path cannot be empty.")
+            continue
+            
+        try:
+            with open(file_path, 'r') as f:
+                usernames = [line.strip() for line in f if line.strip()]
+                
+            if not usernames:
+                print("Error: File is empty.")
+                continue
+                
+            print(f"\nFound {len(usernames)} username(s) in the file.")
+            return usernames
+            
+        except FileNotFoundError:
+            print(f"Error: File '{file_path}' not found.")
+        except Exception as e:
+            print(f"Error reading file: {str(e)}")
+
+# --- Process Single Username ---
+def process_single_username(username, driver):
+    target_url = f"https://www.instagram.com/{username}/reels/?hl=en"
+    
+    try:
+        post_urls = scrape_post_urls_from_feed(
+            driver,
+            target_url,
+            max_urls=MAX_POST_URLS_TO_SCRAPE,
+            scroll_attempts=MAX_SCROLL_ATTEMPTS,
+            scroll_pause_time=SCROLL_PAUSE_TIME
+        )
+        
+        if not post_urls:
+            logger.warning(f"No reels found for user: {username}")
+            return []
+            
+        all_reel_data = []
+        for i, url in enumerate(post_urls, 1):
+            logger.info(f"Scraping reel {i}/{len(post_urls)}: {url}")
+            reel_info = get_reel_info(driver, url)
+            if reel_info:
+                all_reel_data.append(reel_info)
+                print(json.dumps(reel_info, indent=2, ensure_ascii=False))
+            time.sleep(2)
+            
+        return all_reel_data
+        
+    except Exception as e:
+        logger.error(f"Error processing username {username}: {str(e)}")
+        return []
+
+# --- Save Results ---
+def save_results(results, mode, username=None):
+    timestamp = time.strftime("%Y%m%d_%H%M%S")
+    
+    if mode == "single":
+        filename = f"reels_{username}_{timestamp}.json"
+    else:
+        filename = f"reels_bulk_{timestamp}.json"
+        
+    output_file = os.path.join("scraped_data", filename)
+    
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+        
+    return output_file
+
+# Target URL will be set dynamically
 # TARGET_PAGE_URL = "https://www.instagram.com/explore/tags/pythonprogramming/"
 
 # --- Scraping Parameters ---
@@ -508,6 +611,43 @@ def login_instagram(driver, username, password):
         logger.error(f"An unexpected error occurred during login: {e}")
         return False
 
+def get_reel_info(driver, reel_url):
+    """Extract detailed information from a single reel."""
+    try:
+        driver.get(reel_url)
+        time.sleep(3)  # Wait for page to load
+        
+        # Get shortcode from URL
+        shortcode = reel_url.split('/')[-2]
+        
+        # Get date
+        try:
+            time_element = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.TAG_NAME, "time"))
+            )
+            date = time_element.get_attribute("datetime")
+        except:
+            date = None
+            
+        # Get caption
+        try:
+            caption_element = driver.find_element(By.CSS_SELECTOR, "h1")
+            caption = caption_element.text
+        except:
+            caption = ""
+            
+        return {
+            "shortcode": shortcode,
+            "url": reel_url,
+            "is_video": True,  # Since we're only scraping reels
+            "type": "Reel",
+            "date": date,
+            "caption": caption
+        }
+    except Exception as e:
+        logger.error(f"Error scraping reel {reel_url}: {str(e)}")
+        return None
+
 def scrape_post_urls_from_feed(driver, page_url, max_urls=50, scroll_attempts=20, scroll_pause_time=3.5):
     """
     Scrolls down a page (profile/hashtag/reels) and extracts unique post URLs.
@@ -685,11 +825,76 @@ def scrape_post_urls_from_feed(driver, page_url, max_urls=50, scroll_attempts=20
 def main():
     """Main function to run the scraper with improved session handling."""
     driver = None
-    scraped_data = []
+    
     try:
-        driver = setup_driver()
-        if not driver:
-            return
+        # Create output directory if it doesn't exist
+        output_dir = "scraped_data"
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+        
+        while True:
+            mode = select_scraping_mode()
+            
+            driver = setup_driver()
+            if not driver:
+                return
+                
+            # Check login status and handle authentication
+            logger.info("Checking if already logged in via browser session...")
+            driver.get(INSTAGRAM_BASE_URL)
+            time.sleep(3)
+            
+            is_logged_in = check_login_status(driver)
+            
+            if not is_logged_in:
+                session_valid = False
+                if load_cookies(driver):
+                    session_valid = check_login_status(driver)
+                    
+                if not session_valid:
+                    logger.info("No valid session found. Performing standard login...")
+                    if not login_instagram(driver, INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD):
+                        logger.error("Login failed. Cannot proceed to scrape.")
+                        return
+                else:
+                    logger.info("Successfully logged in using saved cookies.")
+            
+            if mode == "single":
+                username = get_target_username()
+                results = process_single_username(username, driver)
+                if results:
+                    output_file = save_results(results, mode, username)
+                    logger.info(f"\nSaved {len(results)} reel details to {output_file}")
+                
+            else:  # bulk mode
+                usernames = get_usernames_file()
+                if not usernames:  # User chose to go back
+                    continue
+                    
+                all_results = {}
+                for i, username in enumerate(usernames, 1):
+                    print(f"\n{'='*50}")
+                    print(f"Processing user {i}/{len(usernames)}: {username}")
+                    print(f"{'='*50}\n")
+                    
+                    results = process_single_username(username, driver)
+                    if results:
+                        all_results[username] = results
+                        
+                if all_results:
+                    output_file = save_results(all_results, mode)
+                    total_reels = sum(len(reels) for reels in all_results.values())
+                    logger.info(f"\nSaved {total_reels} reels from {len(all_results)} users to {output_file}")
+                
+            # Ask if user wants to continue
+            if input("\nWould you like to scrape more reels? (y/n): ").lower() != 'y':
+                print("\nGoodbye!")
+                break
+            
+            # Close the current driver before starting a new session
+            if driver:
+                driver.quit()
+                driver = None
 
         # First check if we're already logged in using just the browser session
         # (without relying on our cookies file)
@@ -731,10 +936,23 @@ def main():
                                               scroll_attempts=MAX_SCROLL_ATTEMPTS,
                                               scroll_pause_time=SCROLL_PAUSE_TIME)
 
-        logger.info("\n--- Collected Post URLs ---")
+        logger.info("\n--- Collecting Detailed Reel Information ---")
         if post_urls:
-            for i, url in enumerate(post_urls):
-                print(f"{i + 1}: {url}")
+            all_reel_data = []
+            for i, url in enumerate(post_urls, 1):
+                logger.info(f"Scraping reel {i}/{len(post_urls)}: {url}")
+                reel_info = get_reel_info(driver, url)
+                if reel_info:
+                    all_reel_data.append(reel_info)
+                    print(json.dumps(reel_info, indent=2, ensure_ascii=False))
+                time.sleep(2)  # Delay between requests
+            
+            # Save to JSON file
+            timestamp = time.strftime("%Y%m%d_%H%M%S")
+            output_file = os.path.join("scraped_data", f"reels_{timestamp}.json")
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(all_reel_data, f, indent=2, ensure_ascii=False)
+            logger.info(f"\nSaved {len(all_reel_data)} reel details to {output_file}")
         else:
             logger.warning("No post URLs were collected.")
         logger.info("--------------------------")
@@ -758,7 +976,5 @@ if __name__ == "__main__":
     if not INSTAGRAM_USERNAME or INSTAGRAM_USERNAME == "YOUR_TEST_USERNAME" or \
        not INSTAGRAM_PASSWORD or INSTAGRAM_PASSWORD == "YOUR_TEST_PASSWORD":
         logger.error("Please update INSTAGRAM_USERNAME and INSTAGRAM_PASSWORD before running.")
-    elif not TARGET_PAGE_URL:
-        logger.error("Please set the TARGET_PAGE_URL (profile or hashtag).")
     else:
         main()

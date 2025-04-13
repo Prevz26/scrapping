@@ -1693,3 +1693,467 @@ Stacktrace:
 --- Collected Post URLs ---
 2025-04-13 21:49:16,193 - INFO - --------------------------
 2025-04-13 21:49:16,194 - INFO - Closing WebDriver.
+2025-04-13 22:22:15,763 - INFO - Setting up Chrome WebDriver...
+2025-04-13 22:22:18,236 - INFO - WebDriver setup complete.
+2025-04-13 22:22:18,236 - INFO - Checking if already logged in via browser session...
+2025-04-13 22:22:25,598 - INFO - Checking login status by navigating to Instagram main page...
+2025-04-13 22:22:29,880 - INFO - Saved screenshot of current state
+2025-04-13 22:22:29,893 - INFO - Login form detected - not logged in
+2025-04-13 22:22:31,441 - INFO - Cookies loaded successfully
+2025-04-13 22:22:31,441 - INFO - Checking login status by navigating to Instagram main page...
+2025-04-13 22:22:45,298 - INFO - Saved screenshot of current state
+2025-04-13 22:23:05,548 - INFO - Profile avatar detected - logged in
+2025-04-13 22:23:05,548 - INFO - Successfully logged in using saved cookies.
+2025-04-13 22:23:07,551 - INFO - Navigating to target page: https://www.instagram.com/cristiano/reels/?hl=en
+2025-04-13 22:23:18,358 - INFO - Saved screenshot of initial page view
+2025-04-13 22:23:18,358 - INFO - Detected page type: REELS
+2025-04-13 22:23:18,406 - INFO - Starting scroll process. Target: 50 URLs or 20 scrolls.
+2025-04-13 22:23:28,566 - INFO - Found direct REEL URL (1/50): https://www.instagram.com/cristiano/reel/DIS_l8rgUFu/
+2025-04-13 22:23:28,579 - INFO - Found direct REEL URL (2/50): https://www.instagram.com/cristiano/reel/DIRZFJlIO1v/
+2025-04-13 22:23:28,589 - INFO - Found direct REEL URL (3/50): https://www.instagram.com/cristiano/reel/DIO2cAmoYc8/
+2025-04-13 22:23:28,599 - INFO - Found direct REEL URL (4/50): https://www.instagram.com/cristiano/reel/DIGxv3iImOM/
+2025-04-13 22:23:28,609 - INFO - Found direct REEL URL (5/50): https://www.instagram.com/cristiano/reel/DH36rT5gaVx/
+2025-04-13 22:23:28,623 - INFO - Found direct REEL URL (6/50): https://www.instagram.com/cristiano/reel/DHq4bFpID1_/
+2025-04-13 22:23:28,665 - INFO - Found direct REEL URL (7/50): https://www.instagram.com/cristiano/reel/DHJD57lolM0/
+2025-04-13 22:23:28,679 - INFO - Found direct REEL URL (8/50): https://www.instagram.com/cristiano/reel/DGQIEqJA8dg/
+2025-04-13 22:23:28,689 - INFO - Found direct REEL URL (9/50): https://www.instagram.com/cristiano/reel/DGF0LucA2J0/
+2025-04-13 22:23:28,703 - INFO - Found direct REEL URL (10/50): https://www.instagram.com/cristiano/reel/DF-4uGrMzfv/
+2025-04-13 22:23:28,715 - INFO - Found direct REEL URL (11/50): https://www.instagram.com/cristiano/reel/DFiLS_II0aa/
+2025-04-13 22:23:28,725 - INFO - Found direct REEL URL (12/50): https://www.instagram.com/cristiano/reel/DEhitI1KeNL/
+2025-04-13 22:23:29,058 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:23:42,789 - INFO - Found direct REEL URL (13/50): https://www.instagram.com/cristiano/reel/DENJbIrxVbg/
+2025-04-13 22:23:42,797 - INFO - Found direct REEL URL (14/50): https://www.instagram.com/cristiano/reel/DD-KT-OAL_U/
+2025-04-13 22:23:42,808 - INFO - Found direct REEL URL (15/50): https://www.instagram.com/cristiano/reel/DDo3EPGAFDr/
+2025-04-13 22:23:42,822 - INFO - Found direct REEL URL (16/50): https://www.instagram.com/cristiano/reel/DDj7WI8S7We/
+2025-04-13 22:23:42,830 - INFO - Found direct REEL URL (17/50): https://www.instagram.com/cristiano/reel/DDc4ksktYSR/
+2025-04-13 22:23:42,845 - INFO - Found direct REEL URL (18/50): https://www.instagram.com/cristiano/reel/DDbqwkjg0hJ/
+2025-04-13 22:23:42,856 - INFO - Found direct REEL URL (19/50): https://www.instagram.com/cristiano/reel/DDM-QVfAUjs/
+2025-04-13 22:23:42,863 - INFO - Found direct REEL URL (20/50): https://www.instagram.com/cristiano/reel/DDCBQ_YsZlz/
+2025-04-13 22:23:42,874 - INFO - Found direct REEL URL (21/50): https://www.instagram.com/cristiano/reel/DDAMZOeA8mW/
+2025-04-13 22:23:42,886 - INFO - Found direct REEL URL (22/50): https://www.instagram.com/cristiano/reel/DC69SiSApaV/
+2025-04-13 22:23:42,894 - INFO - Found direct REEL URL (23/50): https://www.instagram.com/cristiano/reel/DCor1exgMla/
+2025-04-13 22:23:42,904 - INFO - Found direct REEL URL (24/50): https://www.instagram.com/cristiano/reel/DCoGvi7ABJ5/
+2025-04-13 22:23:43,304 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:23:57,098 - INFO - Found direct REEL URL (25/50): https://www.instagram.com/cristiano/reel/DCjnJHWIa75/
+2025-04-13 22:23:57,107 - INFO - Found direct REEL URL (26/50): https://www.instagram.com/cristiano/reel/DCUmFppAiln/
+2025-04-13 22:23:57,118 - INFO - Found direct REEL URL (27/50): https://www.instagram.com/cristiano/reel/DAT3GWQAqpA/
+2025-04-13 22:23:57,128 - INFO - Found direct REEL URL (28/50): https://www.instagram.com/cristiano/reel/DAMFM1IgvzG/
+2025-04-13 22:23:57,137 - INFO - Found direct REEL URL (29/50): https://www.instagram.com/cristiano/reel/DADyVSBAVyk/
+2025-04-13 22:23:57,156 - INFO - Found direct REEL URL (30/50): https://www.instagram.com/cristiano/reel/C_nKillABPu/
+2025-04-13 22:23:57,163 - INFO - Found direct REEL URL (31/50): https://www.instagram.com/cristiano/reel/C_jVGGfIunr/
+2025-04-13 22:23:57,176 - INFO - Found direct REEL URL (32/50): https://www.instagram.com/cristiano/reel/C_TZzcEAGcC/
+2025-04-13 22:23:57,187 - INFO - Found direct REEL URL (33/50): https://www.instagram.com/cristiano/reel/C_Nt4HugB57/
+2025-04-13 22:23:57,195 - INFO - Found direct REEL URL (34/50): https://www.instagram.com/cristiano/reel/C_NIbOUgpyr/
+2025-04-13 22:23:57,206 - INFO - Found direct REEL URL (35/50): https://www.instagram.com/cristiano/reel/C_IrnG9o3EY/
+2025-04-13 22:23:57,214 - INFO - Found direct REEL URL (36/50): https://www.instagram.com/cristiano/reel/C-8pFJHgfg3/
+2025-04-13 22:23:57,700 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:24:11,492 - INFO - Found direct REEL URL (37/50): https://www.instagram.com/cristiano/reel/C-7s6V3oeEe/
+2025-04-13 22:24:11,503 - INFO - Found direct REEL URL (38/50): https://www.instagram.com/cristiano/reel/C-sO70MAeXN/
+2025-04-13 22:24:11,515 - INFO - Found direct REEL URL (39/50): https://www.instagram.com/cristiano/reel/C-GmkE7AAY4/
+2025-04-13 22:24:11,527 - INFO - Found direct REEL URL (40/50): https://www.instagram.com/cristiano/reel/C94o7TLAcz0/
+2025-04-13 22:24:11,538 - INFO - Found direct REEL URL (41/50): https://www.instagram.com/cristiano/reel/C9k6P8HuwqC/
+2025-04-13 22:24:11,547 - INFO - Found direct REEL URL (42/50): https://www.instagram.com/cristiano/reel/C9iNIcTgdCI/
+2025-04-13 22:24:11,558 - INFO - Found direct REEL URL (43/50): https://www.instagram.com/cristiano/reel/C8W4RULowhx/
+2025-04-13 22:24:11,567 - INFO - Found direct REEL URL (44/50): https://www.instagram.com/cristiano/reel/C8KwuP9AaGO/
+2025-04-13 22:24:11,575 - INFO - Found direct REEL URL (45/50): https://www.instagram.com/cristiano/reel/C8Fok72M87y/
+2025-04-13 22:24:11,589 - INFO - Found direct REEL URL (46/50): https://www.instagram.com/cristiano/reel/C755qQWK4vE/
+2025-04-13 22:24:11,598 - INFO - Found direct REEL URL (47/50): https://www.instagram.com/cristiano/reel/C7i22p_oR22/
+2025-04-13 22:24:11,608 - INFO - Found direct REEL URL (48/50): https://www.instagram.com/cristiano/reel/C7gc0djo39b/
+2025-04-13 22:24:12,103 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:24:25,959 - INFO - Found direct REEL URL (49/50): https://www.instagram.com/cristiano/reel/C6_7NlTLtzH/
+2025-04-13 22:24:25,968 - INFO - Found direct REEL URL (50/50): https://www.instagram.com/cristiano/reel/C658DTCL3Od/
+2025-04-13 22:24:25,980 - INFO - Found direct REEL URL (51/50): https://www.instagram.com/cristiano/reel/C6rLq08Ii-Y/
+2025-04-13 22:24:25,991 - INFO - Found direct REEL URL (52/50): https://www.instagram.com/cristiano/reel/C6n7GQ2LmAe/
+2025-04-13 22:24:26,004 - INFO - Found direct REEL URL (53/50): https://www.instagram.com/cristiano/reel/C6MKvGPIsbp/
+2025-04-13 22:24:26,012 - INFO - Found direct REEL URL (54/50): https://www.instagram.com/cristiano/reel/C5bPoUJL6Hr/
+2025-04-13 22:24:26,027 - INFO - Found direct REEL URL (55/50): https://www.instagram.com/cristiano/reel/C5TXrRco3om/
+2025-04-13 22:24:26,038 - INFO - Found direct REEL URL (56/50): https://www.instagram.com/cristiano/reel/C5OZfE_oaId/
+2025-04-13 22:24:26,050 - INFO - Found direct REEL URL (57/50): https://www.instagram.com/cristiano/reel/C5LIQk0gQ7h/
+2025-04-13 22:24:26,061 - INFO - Found direct REEL URL (58/50): https://www.instagram.com/cristiano/reel/C40u4gnIbQ2/
+2025-04-13 22:24:26,074 - INFO - Found direct REEL URL (59/50): https://www.instagram.com/cristiano/reel/C4uyJgRghAC/
+2025-04-13 22:24:26,087 - INFO - Found direct REEL URL (60/50): https://www.instagram.com/cristiano/reel/C4pcxZJgFV6/
+2025-04-13 22:24:26,641 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:24:30,146 - INFO - Reached target number of URLs (50). Stopping scroll.
+2025-04-13 22:24:30,146 - INFO - Found a total of 60 unique post URLs.
+2025-04-13 22:24:30,146 - INFO - 
+--- Collected Post URLs ---
+2025-04-13 22:24:30,147 - INFO - --------------------------
+2025-04-13 22:24:30,147 - INFO - Closing WebDriver.
+2025-04-13 22:26:54,962 - INFO - Setting up Chrome WebDriver...
+2025-04-13 22:26:57,433 - INFO - WebDriver setup complete.
+2025-04-13 22:26:57,433 - INFO - Checking if already logged in via browser session...
+2025-04-13 22:27:04,825 - INFO - Checking login status by navigating to Instagram main page...
+2025-04-13 22:27:09,586 - INFO - Saved screenshot of current state
+2025-04-13 22:27:09,603 - INFO - Login form detected - not logged in
+2025-04-13 22:27:11,408 - INFO - Cookies loaded successfully
+2025-04-13 22:27:11,408 - INFO - Checking login status by navigating to Instagram main page...
+2025-04-13 22:27:24,680 - INFO - Saved screenshot of current state
+2025-04-13 22:27:44,916 - INFO - Profile avatar detected - logged in
+2025-04-13 22:27:44,916 - INFO - Successfully logged in using saved cookies.
+2025-04-13 22:27:46,922 - INFO - Navigating to target page: https://www.instagram.com/cristiano/reels/?hl=en
+2025-04-13 22:28:02,453 - INFO - Saved screenshot of initial page view
+2025-04-13 22:28:02,453 - INFO - Detected page type: REELS
+2025-04-13 22:28:02,574 - INFO - Starting scroll process. Target: 50 URLs or 20 scrolls.
+2025-04-13 22:28:12,612 - INFO - Found direct REEL URL (1/50): https://www.instagram.com/cristiano/reel/DIS_l8rgUFu/
+2025-04-13 22:28:12,625 - INFO - Found direct REEL URL (2/50): https://www.instagram.com/cristiano/reel/DIRZFJlIO1v/
+2025-04-13 22:28:12,640 - INFO - Found direct REEL URL (3/50): https://www.instagram.com/cristiano/reel/DIO2cAmoYc8/
+2025-04-13 22:28:12,653 - INFO - Found direct REEL URL (4/50): https://www.instagram.com/cristiano/reel/DIGxv3iImOM/
+2025-04-13 22:28:12,667 - INFO - Found direct REEL URL (5/50): https://www.instagram.com/cristiano/reel/DH36rT5gaVx/
+2025-04-13 22:28:12,684 - INFO - Found direct REEL URL (6/50): https://www.instagram.com/cristiano/reel/DHq4bFpID1_/
+2025-04-13 22:28:12,694 - INFO - Found direct REEL URL (7/50): https://www.instagram.com/cristiano/reel/DHJD57lolM0/
+2025-04-13 22:28:12,703 - INFO - Found direct REEL URL (8/50): https://www.instagram.com/cristiano/reel/DGQIEqJA8dg/
+2025-04-13 22:28:12,718 - INFO - Found direct REEL URL (9/50): https://www.instagram.com/cristiano/reel/DGF0LucA2J0/
+2025-04-13 22:28:12,733 - INFO - Found direct REEL URL (10/50): https://www.instagram.com/cristiano/reel/DF-4uGrMzfv/
+2025-04-13 22:28:12,742 - INFO - Found direct REEL URL (11/50): https://www.instagram.com/cristiano/reel/DFiLS_II0aa/
+2025-04-13 22:28:12,758 - INFO - Found direct REEL URL (12/50): https://www.instagram.com/cristiano/reel/DEhitI1KeNL/
+2025-04-13 22:28:13,103 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:28:26,879 - INFO - Found direct REEL URL (13/50): https://www.instagram.com/cristiano/reel/DENJbIrxVbg/
+2025-04-13 22:28:26,892 - INFO - Found direct REEL URL (14/50): https://www.instagram.com/cristiano/reel/DD-KT-OAL_U/
+2025-04-13 22:28:26,902 - INFO - Found direct REEL URL (15/50): https://www.instagram.com/cristiano/reel/DDo3EPGAFDr/
+2025-04-13 22:28:26,942 - INFO - Found direct REEL URL (16/50): https://www.instagram.com/cristiano/reel/DDj7WI8S7We/
+2025-04-13 22:28:26,951 - INFO - Found direct REEL URL (17/50): https://www.instagram.com/cristiano/reel/DDc4ksktYSR/
+2025-04-13 22:28:26,963 - INFO - Found direct REEL URL (18/50): https://www.instagram.com/cristiano/reel/DDbqwkjg0hJ/
+2025-04-13 22:28:26,978 - INFO - Found direct REEL URL (19/50): https://www.instagram.com/cristiano/reel/DDM-QVfAUjs/
+2025-04-13 22:28:26,990 - INFO - Found direct REEL URL (20/50): https://www.instagram.com/cristiano/reel/DDCBQ_YsZlz/
+2025-04-13 22:28:27,031 - INFO - Found direct REEL URL (21/50): https://www.instagram.com/cristiano/reel/DDAMZOeA8mW/
+2025-04-13 22:28:27,043 - INFO - Found direct REEL URL (22/50): https://www.instagram.com/cristiano/reel/DC69SiSApaV/
+2025-04-13 22:28:27,060 - INFO - Found direct REEL URL (23/50): https://www.instagram.com/cristiano/reel/DCor1exgMla/
+2025-04-13 22:28:27,069 - INFO - Found direct REEL URL (24/50): https://www.instagram.com/cristiano/reel/DCoGvi7ABJ5/
+2025-04-13 22:28:27,555 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:28:41,359 - INFO - Found direct REEL URL (25/50): https://www.instagram.com/cristiano/reel/DCjnJHWIa75/
+2025-04-13 22:28:41,368 - INFO - Found direct REEL URL (26/50): https://www.instagram.com/cristiano/reel/DCUmFppAiln/
+2025-04-13 22:28:41,379 - INFO - Found direct REEL URL (27/50): https://www.instagram.com/cristiano/reel/DAT3GWQAqpA/
+2025-04-13 22:28:41,390 - INFO - Found direct REEL URL (28/50): https://www.instagram.com/cristiano/reel/DAMFM1IgvzG/
+2025-04-13 22:28:41,398 - INFO - Found direct REEL URL (29/50): https://www.instagram.com/cristiano/reel/DADyVSBAVyk/
+2025-04-13 22:28:41,408 - INFO - Found direct REEL URL (30/50): https://www.instagram.com/cristiano/reel/C_nKillABPu/
+2025-04-13 22:28:41,420 - INFO - Found direct REEL URL (31/50): https://www.instagram.com/cristiano/reel/C_jVGGfIunr/
+2025-04-13 22:28:41,429 - INFO - Found direct REEL URL (32/50): https://www.instagram.com/cristiano/reel/C_TZzcEAGcC/
+2025-04-13 22:28:41,439 - INFO - Found direct REEL URL (33/50): https://www.instagram.com/cristiano/reel/C_Nt4HugB57/
+2025-04-13 22:28:41,449 - INFO - Found direct REEL URL (34/50): https://www.instagram.com/cristiano/reel/C_NIbOUgpyr/
+2025-04-13 22:28:41,458 - INFO - Found direct REEL URL (35/50): https://www.instagram.com/cristiano/reel/C_IrnG9o3EY/
+2025-04-13 22:28:41,468 - INFO - Found direct REEL URL (36/50): https://www.instagram.com/cristiano/reel/C-8pFJHgfg3/
+2025-04-13 22:28:42,097 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:28:56,000 - INFO - Found direct REEL URL (37/50): https://www.instagram.com/cristiano/reel/C-7s6V3oeEe/
+2025-04-13 22:28:56,009 - INFO - Found direct REEL URL (38/50): https://www.instagram.com/cristiano/reel/C-sO70MAeXN/
+2025-04-13 22:28:56,018 - INFO - Found direct REEL URL (39/50): https://www.instagram.com/cristiano/reel/C-GmkE7AAY4/
+2025-04-13 22:28:56,028 - INFO - Found direct REEL URL (40/50): https://www.instagram.com/cristiano/reel/C94o7TLAcz0/
+2025-04-13 22:28:56,036 - INFO - Found direct REEL URL (41/50): https://www.instagram.com/cristiano/reel/C9k6P8HuwqC/
+2025-04-13 22:28:56,049 - INFO - Found direct REEL URL (42/50): https://www.instagram.com/cristiano/reel/C9iNIcTgdCI/
+2025-04-13 22:28:56,058 - INFO - Found direct REEL URL (43/50): https://www.instagram.com/cristiano/reel/C8W4RULowhx/
+2025-04-13 22:28:56,066 - INFO - Found direct REEL URL (44/50): https://www.instagram.com/cristiano/reel/C8KwuP9AaGO/
+2025-04-13 22:28:56,165 - INFO - Found direct REEL URL (45/50): https://www.instagram.com/cristiano/reel/C8Fok72M87y/
+2025-04-13 22:28:56,184 - INFO - Found direct REEL URL (46/50): https://www.instagram.com/cristiano/reel/C755qQWK4vE/
+2025-04-13 22:28:56,196 - INFO - Found direct REEL URL (47/50): https://www.instagram.com/cristiano/reel/C7i22p_oR22/
+2025-04-13 22:28:56,207 - INFO - Found direct REEL URL (48/50): https://www.instagram.com/cristiano/reel/C7gc0djo39b/
+2025-04-13 22:28:56,799 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:29:10,587 - INFO - Found direct REEL URL (49/50): https://www.instagram.com/cristiano/reel/C6_7NlTLtzH/
+2025-04-13 22:29:10,594 - INFO - Found direct REEL URL (50/50): https://www.instagram.com/cristiano/reel/C658DTCL3Od/
+2025-04-13 22:29:10,604 - INFO - Found direct REEL URL (51/50): https://www.instagram.com/cristiano/reel/C6rLq08Ii-Y/
+2025-04-13 22:29:10,616 - INFO - Found direct REEL URL (52/50): https://www.instagram.com/cristiano/reel/C6n7GQ2LmAe/
+2025-04-13 22:29:10,626 - INFO - Found direct REEL URL (53/50): https://www.instagram.com/cristiano/reel/C6MKvGPIsbp/
+2025-04-13 22:29:10,635 - INFO - Found direct REEL URL (54/50): https://www.instagram.com/cristiano/reel/C5bPoUJL6Hr/
+2025-04-13 22:29:10,645 - INFO - Found direct REEL URL (55/50): https://www.instagram.com/cristiano/reel/C5TXrRco3om/
+2025-04-13 22:29:10,656 - INFO - Found direct REEL URL (56/50): https://www.instagram.com/cristiano/reel/C5OZfE_oaId/
+2025-04-13 22:29:10,667 - INFO - Found direct REEL URL (57/50): https://www.instagram.com/cristiano/reel/C5LIQk0gQ7h/
+2025-04-13 22:29:10,677 - INFO - Found direct REEL URL (58/50): https://www.instagram.com/cristiano/reel/C40u4gnIbQ2/
+2025-04-13 22:29:10,688 - INFO - Found direct REEL URL (59/50): https://www.instagram.com/cristiano/reel/C4uyJgRghAC/
+2025-04-13 22:29:10,697 - INFO - Found direct REEL URL (60/50): https://www.instagram.com/cristiano/reel/C4pcxZJgFV6/
+2025-04-13 22:29:11,318 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:29:14,821 - INFO - Reached target number of URLs (50). Stopping scroll.
+2025-04-13 22:29:14,822 - INFO - Found a total of 60 unique post URLs.
+2025-04-13 22:29:14,823 - INFO - 
+--- Collected Post URLs ---
+2025-04-13 22:29:14,824 - INFO - --------------------------
+2025-04-13 22:29:14,824 - INFO - Closing WebDriver.
+2025-04-13 22:33:28,452 - INFO - Setting up Chrome WebDriver...
+2025-04-13 22:33:31,207 - INFO - WebDriver setup complete.
+2025-04-13 22:33:31,207 - INFO - Checking if already logged in via browser session...
+2025-04-13 22:33:39,394 - INFO - Checking login status by navigating to Instagram main page...
+2025-04-13 22:33:43,612 - INFO - Saved screenshot of current state
+2025-04-13 22:33:43,624 - INFO - Login form detected - not logged in
+2025-04-13 22:33:45,177 - INFO - Cookies loaded successfully
+2025-04-13 22:33:45,177 - INFO - Checking login status by navigating to Instagram main page...
+2025-04-13 22:33:54,825 - INFO - Saved screenshot of current state
+2025-04-13 22:34:15,025 - INFO - Profile avatar detected - logged in
+2025-04-13 22:34:15,025 - INFO - Successfully logged in using saved cookies.
+2025-04-13 22:34:17,033 - INFO - Navigating to target page: https://www.instagram.com/cristiano/reels/?hl=en
+2025-04-13 22:34:27,976 - INFO - Saved screenshot of initial page view
+2025-04-13 22:34:27,976 - INFO - Detected page type: REELS
+2025-04-13 22:34:27,983 - INFO - Starting scroll process. Target: 50 URLs or 20 scrolls.
+2025-04-13 22:34:38,069 - INFO - Found direct REEL URL (1/50): https://www.instagram.com/cristiano/reel/DIS_l8rgUFu/
+2025-04-13 22:34:38,094 - INFO - Found direct REEL URL (2/50): https://www.instagram.com/cristiano/reel/DIRZFJlIO1v/
+2025-04-13 22:34:38,109 - INFO - Found direct REEL URL (3/50): https://www.instagram.com/cristiano/reel/DIO2cAmoYc8/
+2025-04-13 22:34:38,193 - INFO - Found direct REEL URL (4/50): https://www.instagram.com/cristiano/reel/DIGxv3iImOM/
+2025-04-13 22:34:38,221 - INFO - Found direct REEL URL (5/50): https://www.instagram.com/cristiano/reel/DH36rT5gaVx/
+2025-04-13 22:34:38,240 - INFO - Found direct REEL URL (6/50): https://www.instagram.com/cristiano/reel/DHq4bFpID1_/
+2025-04-13 22:34:38,257 - INFO - Found direct REEL URL (7/50): https://www.instagram.com/cristiano/reel/DHJD57lolM0/
+2025-04-13 22:34:38,282 - INFO - Found direct REEL URL (8/50): https://www.instagram.com/cristiano/reel/DGQIEqJA8dg/
+2025-04-13 22:34:38,295 - INFO - Found direct REEL URL (9/50): https://www.instagram.com/cristiano/reel/DGF0LucA2J0/
+2025-04-13 22:34:38,319 - INFO - Found direct REEL URL (10/50): https://www.instagram.com/cristiano/reel/DF-4uGrMzfv/
+2025-04-13 22:34:38,335 - INFO - Found direct REEL URL (11/50): https://www.instagram.com/cristiano/reel/DFiLS_II0aa/
+2025-04-13 22:34:38,353 - INFO - Found direct REEL URL (12/50): https://www.instagram.com/cristiano/reel/DEhitI1KeNL/
+2025-04-13 22:34:38,884 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:34:52,681 - INFO - Found direct REEL URL (13/50): https://www.instagram.com/cristiano/reel/DENJbIrxVbg/
+2025-04-13 22:34:52,689 - INFO - Found direct REEL URL (14/50): https://www.instagram.com/cristiano/reel/DD-KT-OAL_U/
+2025-04-13 22:34:52,698 - INFO - Found direct REEL URL (15/50): https://www.instagram.com/cristiano/reel/DDo3EPGAFDr/
+2025-04-13 22:34:52,711 - INFO - Found direct REEL URL (16/50): https://www.instagram.com/cristiano/reel/DDj7WI8S7We/
+2025-04-13 22:34:52,720 - INFO - Found direct REEL URL (17/50): https://www.instagram.com/cristiano/reel/DDc4ksktYSR/
+2025-04-13 22:34:52,732 - INFO - Found direct REEL URL (18/50): https://www.instagram.com/cristiano/reel/DDbqwkjg0hJ/
+2025-04-13 22:34:52,749 - INFO - Found direct REEL URL (19/50): https://www.instagram.com/cristiano/reel/DDM-QVfAUjs/
+2025-04-13 22:34:52,757 - INFO - Found direct REEL URL (20/50): https://www.instagram.com/cristiano/reel/DDCBQ_YsZlz/
+2025-04-13 22:34:52,768 - INFO - Found direct REEL URL (21/50): https://www.instagram.com/cristiano/reel/DDAMZOeA8mW/
+2025-04-13 22:34:52,776 - INFO - Found direct REEL URL (22/50): https://www.instagram.com/cristiano/reel/DC69SiSApaV/
+2025-04-13 22:34:52,790 - INFO - Found direct REEL URL (23/50): https://www.instagram.com/cristiano/reel/DCor1exgMla/
+2025-04-13 22:34:52,802 - INFO - Found direct REEL URL (24/50): https://www.instagram.com/cristiano/reel/DCoGvi7ABJ5/
+2025-04-13 22:34:53,243 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:35:07,056 - INFO - Found direct REEL URL (25/50): https://www.instagram.com/cristiano/reel/DCjnJHWIa75/
+2025-04-13 22:35:07,064 - INFO - Found direct REEL URL (26/50): https://www.instagram.com/cristiano/reel/DCUmFppAiln/
+2025-04-13 22:35:07,071 - INFO - Found direct REEL URL (27/50): https://www.instagram.com/cristiano/reel/DAT3GWQAqpA/
+2025-04-13 22:35:07,081 - INFO - Found direct REEL URL (28/50): https://www.instagram.com/cristiano/reel/DAMFM1IgvzG/
+2025-04-13 22:35:07,091 - INFO - Found direct REEL URL (29/50): https://www.instagram.com/cristiano/reel/DADyVSBAVyk/
+2025-04-13 22:35:07,102 - INFO - Found direct REEL URL (30/50): https://www.instagram.com/cristiano/reel/C_nKillABPu/
+2025-04-13 22:35:07,110 - INFO - Found direct REEL URL (31/50): https://www.instagram.com/cristiano/reel/C_jVGGfIunr/
+2025-04-13 22:35:07,121 - INFO - Found direct REEL URL (32/50): https://www.instagram.com/cristiano/reel/C_TZzcEAGcC/
+2025-04-13 22:35:07,132 - INFO - Found direct REEL URL (33/50): https://www.instagram.com/cristiano/reel/C_Nt4HugB57/
+2025-04-13 22:35:07,139 - INFO - Found direct REEL URL (34/50): https://www.instagram.com/cristiano/reel/C_NIbOUgpyr/
+2025-04-13 22:35:07,150 - INFO - Found direct REEL URL (35/50): https://www.instagram.com/cristiano/reel/C_IrnG9o3EY/
+2025-04-13 22:35:07,157 - INFO - Found direct REEL URL (36/50): https://www.instagram.com/cristiano/reel/C-8pFJHgfg3/
+2025-04-13 22:35:07,739 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:35:21,564 - INFO - Found direct REEL URL (37/50): https://www.instagram.com/cristiano/reel/C-7s6V3oeEe/
+2025-04-13 22:35:21,573 - INFO - Found direct REEL URL (38/50): https://www.instagram.com/cristiano/reel/C-sO70MAeXN/
+2025-04-13 22:35:21,585 - INFO - Found direct REEL URL (39/50): https://www.instagram.com/cristiano/reel/C-GmkE7AAY4/
+2025-04-13 22:35:21,593 - INFO - Found direct REEL URL (40/50): https://www.instagram.com/cristiano/reel/C94o7TLAcz0/
+2025-04-13 22:35:21,604 - INFO - Found direct REEL URL (41/50): https://www.instagram.com/cristiano/reel/C9k6P8HuwqC/
+2025-04-13 22:35:21,617 - INFO - Found direct REEL URL (42/50): https://www.instagram.com/cristiano/reel/C9iNIcTgdCI/
+2025-04-13 22:35:21,625 - INFO - Found direct REEL URL (43/50): https://www.instagram.com/cristiano/reel/C8W4RULowhx/
+2025-04-13 22:35:21,636 - INFO - Found direct REEL URL (44/50): https://www.instagram.com/cristiano/reel/C8KwuP9AaGO/
+2025-04-13 22:35:21,652 - INFO - Found direct REEL URL (45/50): https://www.instagram.com/cristiano/reel/C8Fok72M87y/
+2025-04-13 22:35:21,664 - INFO - Found direct REEL URL (46/50): https://www.instagram.com/cristiano/reel/C755qQWK4vE/
+2025-04-13 22:35:21,675 - INFO - Found direct REEL URL (47/50): https://www.instagram.com/cristiano/reel/C7i22p_oR22/
+2025-04-13 22:35:21,691 - INFO - Found direct REEL URL (48/50): https://www.instagram.com/cristiano/reel/C7gc0djo39b/
+2025-04-13 22:35:22,318 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:35:36,124 - INFO - Found direct REEL URL (49/50): https://www.instagram.com/cristiano/reel/C6_7NlTLtzH/
+2025-04-13 22:35:36,135 - INFO - Found direct REEL URL (50/50): https://www.instagram.com/cristiano/reel/C658DTCL3Od/
+2025-04-13 22:35:36,143 - INFO - Found direct REEL URL (51/50): https://www.instagram.com/cristiano/reel/C6rLq08Ii-Y/
+2025-04-13 22:35:36,156 - INFO - Found direct REEL URL (52/50): https://www.instagram.com/cristiano/reel/C6n7GQ2LmAe/
+2025-04-13 22:35:36,167 - INFO - Found direct REEL URL (53/50): https://www.instagram.com/cristiano/reel/C6MKvGPIsbp/
+2025-04-13 22:35:36,175 - INFO - Found direct REEL URL (54/50): https://www.instagram.com/cristiano/reel/C5bPoUJL6Hr/
+2025-04-13 22:35:36,186 - INFO - Found direct REEL URL (55/50): https://www.instagram.com/cristiano/reel/C5TXrRco3om/
+2025-04-13 22:35:36,193 - INFO - Found direct REEL URL (56/50): https://www.instagram.com/cristiano/reel/C5OZfE_oaId/
+2025-04-13 22:35:36,204 - INFO - Found direct REEL URL (57/50): https://www.instagram.com/cristiano/reel/C5LIQk0gQ7h/
+2025-04-13 22:35:36,215 - INFO - Found direct REEL URL (58/50): https://www.instagram.com/cristiano/reel/C40u4gnIbQ2/
+2025-04-13 22:35:36,223 - INFO - Found direct REEL URL (59/50): https://www.instagram.com/cristiano/reel/C4uyJgRghAC/
+2025-04-13 22:35:36,233 - INFO - Found direct REEL URL (60/50): https://www.instagram.com/cristiano/reel/C4pcxZJgFV6/
+2025-04-13 22:35:36,804 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:35:40,307 - INFO - Reached target number of URLs (50). Stopping scroll.
+2025-04-13 22:35:40,308 - INFO - Found a total of 60 unique post URLs.
+2025-04-13 22:35:40,308 - INFO - 
+--- Collecting Detailed Reel Information ---
+2025-04-13 22:35:40,308 - INFO - Scraping reel 1/60: https://www.instagram.com/cristiano/reel/C8Fok72M87y/
+2025-04-13 22:35:48,814 - INFO - Scraping reel 2/60: https://www.instagram.com/cristiano/reel/DC69SiSApaV/
+2025-04-13 22:35:55,364 - INFO - Scraping reel 3/60: https://www.instagram.com/cristiano/reel/C_TZzcEAGcC/
+2025-04-13 22:36:01,855 - INFO - Scraping reel 4/60: https://www.instagram.com/cristiano/reel/C_Nt4HugB57/
+2025-04-13 22:36:08,486 - INFO - Scraping reel 5/60: https://www.instagram.com/cristiano/reel/C_NIbOUgpyr/
+2025-04-13 22:36:15,321 - INFO - Scraping reel 6/60: https://www.instagram.com/cristiano/reel/C7gc0djo39b/
+2025-04-13 22:36:22,037 - INFO - Scraping reel 7/60: https://www.instagram.com/cristiano/reel/DENJbIrxVbg/
+2025-04-13 22:36:28,590 - INFO - Scraping reel 8/60: https://www.instagram.com/cristiano/reel/DDo3EPGAFDr/
+2025-04-13 22:36:34,739 - INFO - Scraping reel 9/60: https://www.instagram.com/cristiano/reel/DCoGvi7ABJ5/
+2025-04-13 22:36:45,812 - INFO - Scraping reel 10/60: https://www.instagram.com/cristiano/reel/C755qQWK4vE/
+2025-04-13 22:36:58,237 - INFO - Scraping reel 11/60: https://www.instagram.com/cristiano/reel/C6n7GQ2LmAe/
+2025-04-13 22:37:08,776 - INFO - Scraping reel 12/60: https://www.instagram.com/cristiano/reel/C-7s6V3oeEe/
+2025-04-13 22:37:19,785 - INFO - Scraping reel 13/60: https://www.instagram.com/cristiano/reel/DH36rT5gaVx/
+2025-04-13 22:37:30,237 - INFO - Scraping reel 14/60: https://www.instagram.com/cristiano/reel/C_IrnG9o3EY/
+2025-04-13 22:37:36,854 - INFO - Scraping reel 15/60: https://www.instagram.com/cristiano/reel/C6_7NlTLtzH/
+2025-04-13 22:37:44,144 - INFO - Scraping reel 16/60: https://www.instagram.com/cristiano/reel/C5LIQk0gQ7h/
+2025-04-13 22:38:04,665 - INFO - Scraping reel 17/60: https://www.instagram.com/cristiano/reel/DD-KT-OAL_U/
+2025-04-13 22:38:37,376 - INFO - Scraping reel 18/60: https://www.instagram.com/cristiano/reel/DIS_l8rgUFu/
+2025-04-13 22:38:44,200 - INFO - Scraping reel 19/60: https://www.instagram.com/cristiano/reel/DCUmFppAiln/
+2025-04-13 22:38:50,274 - INFO - Scraping reel 20/60: https://www.instagram.com/cristiano/reel/DADyVSBAVyk/
+2025-04-13 22:38:56,732 - INFO - Scraping reel 21/60: https://www.instagram.com/cristiano/reel/DAMFM1IgvzG/
+2025-04-13 22:39:02,783 - INFO - Scraping reel 22/60: https://www.instagram.com/cristiano/reel/DGF0LucA2J0/
+2025-04-13 22:39:09,008 - INFO - Scraping reel 23/60: https://www.instagram.com/cristiano/reel/C_nKillABPu/
+2025-04-13 22:39:15,603 - INFO - Scraping reel 24/60: https://www.instagram.com/cristiano/reel/DIGxv3iImOM/
+2025-04-13 22:39:23,542 - INFO - Scraping reel 25/60: https://www.instagram.com/cristiano/reel/DHq4bFpID1_/
+2025-04-13 22:39:29,709 - INFO - Scraping reel 26/60: https://www.instagram.com/cristiano/reel/C5bPoUJL6Hr/
+2025-04-13 22:39:42,075 - INFO - Scraping reel 27/60: https://www.instagram.com/cristiano/reel/DDj7WI8S7We/
+2025-04-13 22:39:54,941 - INFO - Scraping reel 28/60: https://www.instagram.com/cristiano/reel/C_jVGGfIunr/
+2025-04-13 22:40:03,914 - INFO - Scraping reel 29/60: https://www.instagram.com/cristiano/reel/C4uyJgRghAC/
+2025-04-13 22:40:17,868 - INFO - Scraping reel 30/60: https://www.instagram.com/cristiano/reel/DGQIEqJA8dg/
+2025-04-13 22:40:28,616 - INFO - Scraping reel 31/60: https://www.instagram.com/cristiano/reel/C9iNIcTgdCI/
+2025-04-13 22:40:42,648 - INFO - Scraping reel 32/60: https://www.instagram.com/cristiano/reel/C6MKvGPIsbp/
+2025-04-13 22:40:56,374 - INFO - Scraping reel 33/60: https://www.instagram.com/cristiano/reel/C5OZfE_oaId/
+2025-04-13 22:41:06,689 - INFO - Scraping reel 34/60: https://www.instagram.com/cristiano/reel/C-sO70MAeXN/
+2025-04-13 22:41:17,260 - INFO - Scraping reel 35/60: https://www.instagram.com/cristiano/reel/C-8pFJHgfg3/
+2025-04-13 22:41:27,830 - INFO - Scraping reel 36/60: https://www.instagram.com/cristiano/reel/DDM-QVfAUjs/
+2025-04-13 22:41:42,740 - INFO - Scraping reel 37/60: https://www.instagram.com/cristiano/reel/C6rLq08Ii-Y/
+2025-04-13 22:41:54,749 - INFO - Scraping reel 38/60: https://www.instagram.com/cristiano/reel/DDbqwkjg0hJ/
+2025-04-13 22:42:04,654 - INFO - Scraping reel 39/60: https://www.instagram.com/cristiano/reel/C94o7TLAcz0/
+2025-04-13 22:42:16,176 - INFO - Scraping reel 40/60: https://www.instagram.com/cristiano/reel/DFiLS_II0aa/
+2025-04-13 22:42:25,041 - INFO - Scraping reel 41/60: https://www.instagram.com/cristiano/reel/DF-4uGrMzfv/
+2025-04-13 22:42:36,654 - INFO - Scraping reel 42/60: https://www.instagram.com/cristiano/reel/DDAMZOeA8mW/
+2025-04-13 22:42:48,254 - INFO - Scraping reel 43/60: https://www.instagram.com/cristiano/reel/DCjnJHWIa75/
+2025-04-13 22:42:58,374 - INFO - Scraping reel 44/60: https://www.instagram.com/cristiano/reel/C9k6P8HuwqC/
+2025-04-13 22:43:09,763 - INFO - Scraping reel 45/60: https://www.instagram.com/cristiano/reel/C8KwuP9AaGO/
+2025-04-13 22:43:19,212 - INFO - Scraping reel 46/60: https://www.instagram.com/cristiano/reel/DDCBQ_YsZlz/
+2025-04-13 22:43:27,119 - INFO - Scraping reel 47/60: https://www.instagram.com/cristiano/reel/C658DTCL3Od/
+2025-04-13 22:43:39,820 - INFO - Scraping reel 48/60: https://www.instagram.com/cristiano/reel/DHJD57lolM0/
+2025-04-13 22:43:49,219 - INFO - Scraping reel 49/60: https://www.instagram.com/cristiano/reel/C8W4RULowhx/
+2025-04-13 22:44:01,871 - INFO - Scraping reel 50/60: https://www.instagram.com/cristiano/reel/C5TXrRco3om/
+2025-04-13 22:44:14,634 - INFO - Scraping reel 51/60: https://www.instagram.com/cristiano/reel/C-GmkE7AAY4/
+2025-04-13 22:44:26,588 - INFO - Scraping reel 52/60: https://www.instagram.com/cristiano/reel/C7i22p_oR22/
+2025-04-13 22:44:36,004 - INFO - Scraping reel 53/60: https://www.instagram.com/cristiano/reel/C4pcxZJgFV6/
+2025-04-13 22:44:46,594 - INFO - Scraping reel 54/60: https://www.instagram.com/cristiano/reel/DDc4ksktYSR/
+2025-04-13 22:44:54,938 - INFO - Scraping reel 55/60: https://www.instagram.com/cristiano/reel/DIO2cAmoYc8/
+2025-04-13 22:45:05,392 - INFO - Scraping reel 56/60: https://www.instagram.com/cristiano/reel/DEhitI1KeNL/
+2025-04-13 22:45:16,216 - INFO - Scraping reel 57/60: https://www.instagram.com/cristiano/reel/DAT3GWQAqpA/
+2025-04-13 22:45:25,613 - INFO - Scraping reel 58/60: https://www.instagram.com/cristiano/reel/DCor1exgMla/
+2025-04-13 22:45:33,740 - INFO - Scraping reel 59/60: https://www.instagram.com/cristiano/reel/DIRZFJlIO1v/
+2025-04-13 22:45:47,362 - INFO - Scraping reel 60/60: https://www.instagram.com/cristiano/reel/C40u4gnIbQ2/
+2025-04-13 22:45:56,941 - INFO - 
+Saved 60 reel details to scraped_data/reels_20250413_224556.json
+2025-04-13 22:45:56,941 - INFO - --------------------------
+2025-04-13 22:45:56,942 - INFO - Closing WebDriver.
+2025-04-13 22:54:56,452 - INFO - Setting up Chrome WebDriver...
+2025-04-13 22:54:58,833 - INFO - WebDriver setup complete.
+2025-04-13 22:54:58,833 - INFO - Checking if already logged in via browser session...
+2025-04-13 22:55:02,246 - INFO - Checking login status by navigating to Instagram main page...
+2025-04-13 22:55:08,438 - INFO - Saved screenshot of current state
+2025-04-13 22:55:08,452 - INFO - Login form detected - not logged in
+2025-04-13 22:55:10,332 - INFO - Cookies loaded successfully
+2025-04-13 22:55:10,333 - INFO - Checking login status by navigating to Instagram main page...
+2025-04-13 22:55:17,780 - INFO - Saved screenshot of current state
+2025-04-13 22:55:38,007 - INFO - Profile avatar detected - logged in
+2025-04-13 22:55:38,007 - INFO - Successfully logged in using saved cookies.
+2025-04-13 22:56:27,500 - INFO - Navigating to target page: https://www.instagram.com/cristiano/reels/?hl=en
+2025-04-13 22:56:42,086 - INFO - Saved screenshot of initial page view
+2025-04-13 22:56:42,086 - INFO - Detected page type: REELS
+2025-04-13 22:56:42,094 - INFO - Starting scroll process. Target: 50 URLs or 20 scrolls.
+2025-04-13 22:56:52,164 - INFO - Found direct REEL URL (1/50): https://www.instagram.com/cristiano/reel/DIS_l8rgUFu/
+2025-04-13 22:56:52,175 - INFO - Found direct REEL URL (2/50): https://www.instagram.com/cristiano/reel/DIRZFJlIO1v/
+2025-04-13 22:56:52,189 - INFO - Found direct REEL URL (3/50): https://www.instagram.com/cristiano/reel/DIO2cAmoYc8/
+2025-04-13 22:56:52,201 - INFO - Found direct REEL URL (4/50): https://www.instagram.com/cristiano/reel/DIGxv3iImOM/
+2025-04-13 22:56:52,209 - INFO - Found direct REEL URL (5/50): https://www.instagram.com/cristiano/reel/DH36rT5gaVx/
+2025-04-13 22:56:52,222 - INFO - Found direct REEL URL (6/50): https://www.instagram.com/cristiano/reel/DHq4bFpID1_/
+2025-04-13 22:56:52,236 - INFO - Found direct REEL URL (7/50): https://www.instagram.com/cristiano/reel/DHJD57lolM0/
+2025-04-13 22:56:52,244 - INFO - Found direct REEL URL (8/50): https://www.instagram.com/cristiano/reel/DGQIEqJA8dg/
+2025-04-13 22:56:52,259 - INFO - Found direct REEL URL (9/50): https://www.instagram.com/cristiano/reel/DGF0LucA2J0/
+2025-04-13 22:56:52,275 - INFO - Found direct REEL URL (10/50): https://www.instagram.com/cristiano/reel/DF-4uGrMzfv/
+2025-04-13 22:56:52,287 - INFO - Found direct REEL URL (11/50): https://www.instagram.com/cristiano/reel/DFiLS_II0aa/
+2025-04-13 22:56:52,296 - INFO - Found direct REEL URL (12/50): https://www.instagram.com/cristiano/reel/DEhitI1KeNL/
+2025-04-13 22:56:52,788 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:57:06,505 - INFO - Found direct REEL URL (13/50): https://www.instagram.com/cristiano/reel/DENJbIrxVbg/
+2025-04-13 22:57:06,516 - INFO - Found direct REEL URL (14/50): https://www.instagram.com/cristiano/reel/DD-KT-OAL_U/
+2025-04-13 22:57:06,525 - INFO - Found direct REEL URL (15/50): https://www.instagram.com/cristiano/reel/DDo3EPGAFDr/
+2025-04-13 22:57:06,544 - INFO - Found direct REEL URL (16/50): https://www.instagram.com/cristiano/reel/DDj7WI8S7We/
+2025-04-13 22:57:06,559 - INFO - Found direct REEL URL (17/50): https://www.instagram.com/cristiano/reel/DDc4ksktYSR/
+2025-04-13 22:57:06,569 - INFO - Found direct REEL URL (18/50): https://www.instagram.com/cristiano/reel/DDbqwkjg0hJ/
+2025-04-13 22:57:06,578 - INFO - Found direct REEL URL (19/50): https://www.instagram.com/cristiano/reel/DDM-QVfAUjs/
+2025-04-13 22:57:06,589 - INFO - Found direct REEL URL (20/50): https://www.instagram.com/cristiano/reel/DDCBQ_YsZlz/
+2025-04-13 22:57:06,601 - INFO - Found direct REEL URL (21/50): https://www.instagram.com/cristiano/reel/DDAMZOeA8mW/
+2025-04-13 22:57:06,608 - INFO - Found direct REEL URL (22/50): https://www.instagram.com/cristiano/reel/DC69SiSApaV/
+2025-04-13 22:57:06,620 - INFO - Found direct REEL URL (23/50): https://www.instagram.com/cristiano/reel/DCor1exgMla/
+2025-04-13 22:57:06,628 - INFO - Found direct REEL URL (24/50): https://www.instagram.com/cristiano/reel/DCoGvi7ABJ5/
+2025-04-13 22:57:07,251 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:57:21,082 - INFO - Found direct REEL URL (25/50): https://www.instagram.com/cristiano/reel/DCjnJHWIa75/
+2025-04-13 22:57:21,090 - INFO - Found direct REEL URL (26/50): https://www.instagram.com/cristiano/reel/DCUmFppAiln/
+2025-04-13 22:57:21,101 - INFO - Found direct REEL URL (27/50): https://www.instagram.com/cristiano/reel/DAT3GWQAqpA/
+2025-04-13 22:57:21,109 - INFO - Found direct REEL URL (28/50): https://www.instagram.com/cristiano/reel/DAMFM1IgvzG/
+2025-04-13 22:57:21,120 - INFO - Found direct REEL URL (29/50): https://www.instagram.com/cristiano/reel/DADyVSBAVyk/
+2025-04-13 22:57:21,128 - INFO - Found direct REEL URL (30/50): https://www.instagram.com/cristiano/reel/C_nKillABPu/
+2025-04-13 22:57:21,140 - INFO - Found direct REEL URL (31/50): https://www.instagram.com/cristiano/reel/C_jVGGfIunr/
+2025-04-13 22:57:21,151 - INFO - Found direct REEL URL (32/50): https://www.instagram.com/cristiano/reel/C_TZzcEAGcC/
+2025-04-13 22:57:21,158 - INFO - Found direct REEL URL (33/50): https://www.instagram.com/cristiano/reel/C_Nt4HugB57/
+2025-04-13 22:57:21,169 - INFO - Found direct REEL URL (34/50): https://www.instagram.com/cristiano/reel/C_NIbOUgpyr/
+2025-04-13 22:57:21,177 - INFO - Found direct REEL URL (35/50): https://www.instagram.com/cristiano/reel/C_IrnG9o3EY/
+2025-04-13 22:57:21,188 - INFO - Found direct REEL URL (36/50): https://www.instagram.com/cristiano/reel/C-8pFJHgfg3/
+2025-04-13 22:57:21,794 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:57:35,685 - INFO - Found direct REEL URL (37/50): https://www.instagram.com/cristiano/reel/C-7s6V3oeEe/
+2025-04-13 22:57:35,717 - INFO - Found direct REEL URL (38/50): https://www.instagram.com/cristiano/reel/C-sO70MAeXN/
+2025-04-13 22:57:35,733 - INFO - Found direct REEL URL (39/50): https://www.instagram.com/cristiano/reel/C-GmkE7AAY4/
+2025-04-13 22:57:35,742 - INFO - Found direct REEL URL (40/50): https://www.instagram.com/cristiano/reel/C94o7TLAcz0/
+2025-04-13 22:57:35,753 - INFO - Found direct REEL URL (41/50): https://www.instagram.com/cristiano/reel/C9k6P8HuwqC/
+2025-04-13 22:57:35,761 - INFO - Found direct REEL URL (42/50): https://www.instagram.com/cristiano/reel/C9iNIcTgdCI/
+2025-04-13 22:57:35,774 - INFO - Found direct REEL URL (43/50): https://www.instagram.com/cristiano/reel/C8W4RULowhx/
+2025-04-13 22:57:35,784 - INFO - Found direct REEL URL (44/50): https://www.instagram.com/cristiano/reel/C8KwuP9AaGO/
+2025-04-13 22:57:35,793 - INFO - Found direct REEL URL (45/50): https://www.instagram.com/cristiano/reel/C8Fok72M87y/
+2025-04-13 22:57:35,804 - INFO - Found direct REEL URL (46/50): https://www.instagram.com/cristiano/reel/C755qQWK4vE/
+2025-04-13 22:57:35,815 - INFO - Found direct REEL URL (47/50): https://www.instagram.com/cristiano/reel/C7i22p_oR22/
+2025-04-13 22:57:35,824 - INFO - Found direct REEL URL (48/50): https://www.instagram.com/cristiano/reel/C7gc0djo39b/
+2025-04-13 22:57:36,417 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:57:50,250 - INFO - Found direct REEL URL (49/50): https://www.instagram.com/cristiano/reel/C6_7NlTLtzH/
+2025-04-13 22:57:50,259 - INFO - Found direct REEL URL (50/50): https://www.instagram.com/cristiano/reel/C658DTCL3Od/
+2025-04-13 22:57:50,269 - INFO - Found direct REEL URL (51/50): https://www.instagram.com/cristiano/reel/C6rLq08Ii-Y/
+2025-04-13 22:57:50,277 - INFO - Found direct REEL URL (52/50): https://www.instagram.com/cristiano/reel/C6n7GQ2LmAe/
+2025-04-13 22:57:50,286 - INFO - Found direct REEL URL (53/50): https://www.instagram.com/cristiano/reel/C6MKvGPIsbp/
+2025-04-13 22:57:50,298 - INFO - Found direct REEL URL (54/50): https://www.instagram.com/cristiano/reel/C5bPoUJL6Hr/
+2025-04-13 22:57:50,306 - INFO - Found direct REEL URL (55/50): https://www.instagram.com/cristiano/reel/C5TXrRco3om/
+2025-04-13 22:57:50,316 - INFO - Found direct REEL URL (56/50): https://www.instagram.com/cristiano/reel/C5OZfE_oaId/
+2025-04-13 22:57:50,324 - INFO - Found direct REEL URL (57/50): https://www.instagram.com/cristiano/reel/C5LIQk0gQ7h/
+2025-04-13 22:57:50,334 - INFO - Found direct REEL URL (58/50): https://www.instagram.com/cristiano/reel/C40u4gnIbQ2/
+2025-04-13 22:57:50,342 - INFO - Found direct REEL URL (59/50): https://www.instagram.com/cristiano/reel/C4uyJgRghAC/
+2025-04-13 22:57:50,354 - INFO - Found direct REEL URL (60/50): https://www.instagram.com/cristiano/reel/C4pcxZJgFV6/
+2025-04-13 22:57:50,907 - INFO - Scrolled down. Pausing for 3.5s...
+2025-04-13 22:57:54,417 - INFO - Reached target number of URLs (50). Stopping scroll.
+2025-04-13 22:57:54,418 - INFO - Found a total of 60 unique post URLs.
+2025-04-13 22:57:54,418 - INFO - Scraping reel 1/60: https://www.instagram.com/cristiano/reel/C4uyJgRghAC/
+2025-04-13 22:58:01,922 - INFO - Scraping reel 2/60: https://www.instagram.com/cristiano/reel/DH36rT5gaVx/
+2025-04-13 22:58:07,904 - INFO - Scraping reel 3/60: https://www.instagram.com/cristiano/reel/C5bPoUJL6Hr/
+2025-04-13 22:58:14,166 - INFO - Scraping reel 4/60: https://www.instagram.com/cristiano/reel/DHq4bFpID1_/
+2025-04-13 22:58:21,253 - INFO - Scraping reel 5/60: https://www.instagram.com/cristiano/reel/C4pcxZJgFV6/
+2025-04-13 22:58:28,752 - INFO - Scraping reel 6/60: https://www.instagram.com/cristiano/reel/C5OZfE_oaId/
+2025-04-13 22:58:36,792 - INFO - Scraping reel 7/60: https://www.instagram.com/cristiano/reel/DCoGvi7ABJ5/
+2025-04-13 22:58:46,585 - INFO - Scraping reel 8/60: https://www.instagram.com/cristiano/reel/C-sO70MAeXN/
+2025-04-13 22:58:53,492 - INFO - Scraping reel 9/60: https://www.instagram.com/cristiano/reel/DGF0LucA2J0/
+2025-04-13 22:59:01,697 - INFO - Scraping reel 10/60: https://www.instagram.com/cristiano/reel/DDc4ksktYSR/
+2025-04-13 22:59:07,985 - INFO - Scraping reel 11/60: https://www.instagram.com/cristiano/reel/DDAMZOeA8mW/
+2025-04-13 22:59:13,884 - INFO - Scraping reel 12/60: https://www.instagram.com/cristiano/reel/C_IrnG9o3EY/
+2025-04-13 22:59:20,707 - INFO - Scraping reel 13/60: https://www.instagram.com/cristiano/reel/DADyVSBAVyk/
+2025-04-13 22:59:27,192 - INFO - Scraping reel 14/60: https://www.instagram.com/cristiano/reel/C_nKillABPu/
+2025-04-13 22:59:34,126 - INFO - Scraping reel 15/60: https://www.instagram.com/cristiano/reel/DDbqwkjg0hJ/
+2025-04-13 22:59:40,786 - INFO - Scraping reel 16/60: https://www.instagram.com/cristiano/reel/DDCBQ_YsZlz/
+2025-04-13 22:59:47,725 - INFO - Scraping reel 17/60: https://www.instagram.com/cristiano/reel/C_Nt4HugB57/
+2025-04-13 22:59:54,082 - INFO - Scraping reel 18/60: https://www.instagram.com/cristiano/reel/C9k6P8HuwqC/
+2025-04-13 23:00:02,321 - INFO - Scraping reel 19/60: https://www.instagram.com/cristiano/reel/C40u4gnIbQ2/
+2025-04-13 23:00:09,624 - INFO - Scraping reel 20/60: https://www.instagram.com/cristiano/reel/DGQIEqJA8dg/
+2025-04-13 23:00:15,788 - INFO - Scraping reel 21/60: https://www.instagram.com/cristiano/reel/DD-KT-OAL_U/
+2025-04-13 23:00:27,030 - INFO - Scraping reel 22/60: https://www.instagram.com/cristiano/reel/C8Fok72M87y/
+2025-04-13 23:00:34,266 - INFO - Scraping reel 23/60: https://www.instagram.com/cristiano/reel/C8W4RULowhx/
+2025-04-13 23:00:41,737 - INFO - Scraping reel 24/60: https://www.instagram.com/cristiano/reel/DDM-QVfAUjs/
+2025-04-13 23:00:48,365 - INFO - Scraping reel 25/60: https://www.instagram.com/cristiano/reel/DCjnJHWIa75/
+2025-04-13 23:00:55,590 - INFO - Scraping reel 26/60: https://www.instagram.com/cristiano/reel/C_NIbOUgpyr/
+2025-04-13 23:01:02,043 - INFO - Scraping reel 27/60: https://www.instagram.com/cristiano/reel/DIGxv3iImOM/
+2025-04-13 23:01:08,773 - INFO - Scraping reel 28/60: https://www.instagram.com/cristiano/reel/C-GmkE7AAY4/
+2025-04-13 23:01:17,071 - INFO - Scraping reel 29/60: https://www.instagram.com/cristiano/reel/C6_7NlTLtzH/
+2025-04-13 23:01:29,632 - INFO - Scraping reel 30/60: https://www.instagram.com/cristiano/reel/C-8pFJHgfg3/
+2025-04-13 23:01:38,063 - INFO - Scraping reel 31/60: https://www.instagram.com/cristiano/reel/DEhitI1KeNL/
+2025-04-13 23:01:47,683 - INFO - Scraping reel 32/60: https://www.instagram.com/cristiano/reel/C94o7TLAcz0/
+2025-04-13 23:01:55,169 - INFO - Scraping reel 33/60: https://www.instagram.com/cristiano/reel/C658DTCL3Od/
+2025-04-13 23:02:01,888 - INFO - Scraping reel 34/60: https://www.instagram.com/cristiano/reel/DIRZFJlIO1v/
+2025-04-13 23:02:09,290 - INFO - Scraping reel 35/60: https://www.instagram.com/cristiano/reel/C5TXrRco3om/
+2025-04-13 23:02:17,348 - INFO - Scraping reel 36/60: https://www.instagram.com/cristiano/reel/DCor1exgMla/
+2025-04-13 23:02:24,674 - INFO - Scraping reel 37/60: https://www.instagram.com/cristiano/reel/DC69SiSApaV/
+2025-04-13 23:02:31,439 - INFO - Scraping reel 38/60: https://www.instagram.com/cristiano/reel/DIS_l8rgUFu/
+2025-04-13 23:02:38,122 - INFO - Scraping reel 39/60: https://www.instagram.com/cristiano/reel/DAMFM1IgvzG/
+2025-04-13 23:02:44,528 - INFO - Scraping reel 40/60: https://www.instagram.com/cristiano/reel/DFiLS_II0aa/
+2025-04-13 23:02:51,064 - INFO - Scraping reel 41/60: https://www.instagram.com/cristiano/reel/DENJbIrxVbg/
+2025-04-13 23:02:57,680 - INFO - Scraping reel 42/60: https://www.instagram.com/cristiano/reel/C9iNIcTgdCI/
+2025-04-13 23:03:04,004 - INFO - Scraping reel 43/60: https://www.instagram.com/cristiano/reel/C_TZzcEAGcC/
+2025-04-13 23:03:10,353 - INFO - Scraping reel 44/60: https://www.instagram.com/cristiano/reel/C755qQWK4vE/
+2025-04-13 23:03:16,714 - INFO - Scraping reel 45/60: https://www.instagram.com/cristiano/reel/C-7s6V3oeEe/
+2025-04-13 23:03:23,187 - INFO - Scraping reel 46/60: https://www.instagram.com/cristiano/reel/DIO2cAmoYc8/
+2025-04-13 23:03:29,313 - INFO - Scraping reel 47/60: https://www.instagram.com/cristiano/reel/C_jVGGfIunr/
+2025-04-13 23:03:36,038 - INFO - Scraping reel 48/60: https://www.instagram.com/cristiano/reel/C7gc0djo39b/
+2025-04-13 23:03:43,914 - INFO - Scraping reel 49/60: https://www.instagram.com/cristiano/reel/DHJD57lolM0/
+2025-04-13 23:03:50,678 - INFO - Scraping reel 50/60: https://www.instagram.com/cristiano/reel/C5LIQk0gQ7h/
+2025-04-13 23:03:57,613 - INFO - Scraping reel 51/60: https://www.instagram.com/cristiano/reel/DF-4uGrMzfv/
+2025-04-13 23:04:03,831 - INFO - Scraping reel 52/60: https://www.instagram.com/cristiano/reel/C8KwuP9AaGO/
+2025-04-13 23:04:10,279 - INFO - Scraping reel 53/60: https://www.instagram.com/cristiano/reel/DCUmFppAiln/
+2025-04-13 23:04:16,363 - INFO - Scraping reel 54/60: https://www.instagram.com/cristiano/reel/C7i22p_oR22/
+2025-04-13 23:04:23,268 - INFO - Scraping reel 55/60: https://www.instagram.com/cristiano/reel/DDo3EPGAFDr/
+2025-04-13 23:04:29,383 - INFO - Scraping reel 56/60: https://www.instagram.com/cristiano/reel/C6rLq08Ii-Y/
+2025-04-13 23:04:35,723 - INFO - Scraping reel 57/60: https://www.instagram.com/cristiano/reel/C6MKvGPIsbp/
+2025-04-13 23:04:41,793 - INFO - Scraping reel 58/60: https://www.instagram.com/cristiano/reel/C6n7GQ2LmAe/
+2025-04-13 23:04:48,462 - INFO - Scraping reel 59/60: https://www.instagram.com/cristiano/reel/DAT3GWQAqpA/
+2025-04-13 23:04:55,001 - INFO - Scraping reel 60/60: https://www.instagram.com/cristiano/reel/DDj7WI8S7We/
+2025-04-13 23:05:01,769 - INFO - 
+Saved 60 reel details to scraped_data/reels_cristiano_20250413_230501.json
