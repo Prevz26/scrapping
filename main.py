@@ -32,7 +32,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # --- Choose Target Page Type ---
-TARGET_PAGE_URL = "https://www.instagram.com/explore/tags/pythonprogramming/"
+TARGET_PAGE_URL = "https://www.instagram.com/cristiano/reels/?hl=en"
+# TARGET_PAGE_URL = "https://www.instagram.com/explore/tags/pythonprogramming/"
 
 # --- Scraping Parameters ---
 MAX_POST_URLS_TO_SCRAPE = 50
@@ -125,28 +126,74 @@ def load_cookies(driver):
 
 
 def check_login_status(driver):
-    """Check if we're already logged in."""
+    """
+    Check if we're already logged in with improved detection for Selenium browser sessions.
+    """
     try:
-        # Navigate to Instagram and check for elements that indicate logged-in state
+        # Navigate to Instagram main page
+        logger.info("Checking login status by navigating to Instagram main page...")
         driver.get(INSTAGRAM_BASE_URL)
-        time.sleep(3)  # Wait for page to load
+        time.sleep(3)  # Wait for page to load completely
         
-        # Check if login form is present (not logged in)
+        # Take a screenshot for debugging
+        try:
+            driver.save_screenshot("login_status_check.png")
+            logger.info("Saved screenshot of current state")
+        except Exception as e:
+            logger.warning(f"Couldn't save screenshot: {e}")
+        
+        # Method 1: Check for login form elements (not logged in)
         login_elements = driver.find_elements(By.NAME, "username")
-        if login_elements:
-            logger.info("Not logged in, login form detected.")
+        if login_elements and len(login_elements) > 0:
+            logger.info("Login form detected - not logged in")
             return False
             
-        # Check for elements that typically appear when logged in
+        # Method 2: Check for common elements that appear when logged in
+        # These are UI elements typically only visible when logged in
+        logged_in_indicators = [
+            "//svg[@aria-label='Home']",
+            "//a[@href='/explore/']",
+            "//a[contains(@href, '/direct/inbox/')]",
+            "//span[text()='Search']",
+            "//div[@role='navigation']",  # Nav bar is usually present when logged in
+            "//a[contains(@href, '/notifications/')]"
+        ]
+        
+        for indicator in logged_in_indicators:
+            try:
+                element = driver.find_element(By.XPATH, indicator)
+                if element.is_displayed():
+                    logger.info(f"Detected logged-in state indicator: {indicator}")
+                    return True
+            except (NoSuchElementException, TimeoutException):
+                continue
+        
+        # Method 3: Check if profile avatar is present (usually top-right when logged in)
         try:
-            WebDriverWait(driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, "//svg[@aria-label='Home']"))
-            )
-            logger.info("Already logged in. Session is active.")
+            avatar_elements = driver.find_elements(By.XPATH, "//img[contains(@alt, 'profile picture')]")
+            if avatar_elements and len(avatar_elements) > 0:
+                logger.info("Profile avatar detected - logged in")
+                return True
+        except Exception:
+            pass
+            
+        # Method 4: Check for Instagram Stories bar (only appears when logged in)
+        try:
+            stories_elements = driver.find_elements(By.XPATH, "//div[contains(@class, 'Stories')]")
+            if stories_elements and len(stories_elements) > 0:
+                logger.info("Stories bar detected - logged in")
+                return True
+        except Exception:
+            pass
+            
+        # Method 5: Check if the URL changed to redirect from login
+        current_url = driver.current_url
+        if current_url != LOGIN_URL and "/" in current_url.replace(INSTAGRAM_BASE_URL, ""):
+            logger.info(f"URL indicates we're not on login page: {current_url}")
             return True
-        except TimeoutException:
-            logger.info("Home icon not found, assuming not logged in.")
-            return False
+            
+        logger.warning("Could not definitively determine login status - assuming not logged in")
+        return False
             
     except Exception as e:
         logger.error(f"Error checking login status: {e}")
@@ -464,10 +511,25 @@ def login_instagram(driver, username, password):
         return False
 
 def scrape_post_urls_from_feed(driver, page_url, max_urls=50, scroll_attempts=20, scroll_pause_time=3.5):
-    """Scrolls down a page (profile/hashtag) and extracts unique post URLs."""
+    """
+    Scrolls down a page (profile/hashtag/reels) and extracts unique post URLs.
+    """
     logger.info(f"Navigating to target page: {page_url}")
     driver.get(page_url)
-    time.sleep(SHORT_DELAY + 1)  # Wait for initial page load
+    time.sleep(SHORT_DELAY + 3)  # Extended wait for initial page load
+    
+    # Take screenshot of initial page for debugging
+    try:
+        driver.save_screenshot("initial_page_view.png")
+        logger.info("Saved screenshot of initial page view")
+    except Exception as e:
+        logger.warning(f"Couldn't save screenshot: {e}")
+
+    # Determine page type
+    is_reels_page = '/reels/' in page_url or 'reels' in page_url
+    is_hashtag_page = '/explore/tags/' in page_url
+    
+    logger.info(f"Detected page type: {'REELS' if is_reels_page else 'HASHTAG' if is_hashtag_page else 'STANDARD'}")
 
     post_urls = set()
     last_height = driver.execute_script("return document.body.scrollHeight")
@@ -476,24 +538,99 @@ def scrape_post_urls_from_feed(driver, page_url, max_urls=50, scroll_attempts=20
     logger.info(f"Starting scroll process. Target: {max_urls} URLs or {scroll_attempts} scrolls.")
 
     for attempt in range(scroll_attempts):
+        # Extract links BEFORE scrolling
+        current_urls_count = len(post_urls)
+        
+        # REELS-SPECIFIC DETECTION
+        if is_reels_page:
+            # Method specific for reels pages
+            try:
+                # Reels often use video elements or specific containers
+                video_containers = driver.find_elements(By.XPATH, "//div[contains(@role, 'presentation') or contains(@role, 'dialog')]//a")
+                reels_containers = driver.find_elements(By.XPATH, "//div[contains(@class, 'ENC4A') or contains(@class, '_ab8w')]//a")
+                
+                # Try to find any links in parts of the page that appear to be reels
+                for container in video_containers + reels_containers:
+                    try:
+                        href = container.get_attribute('href')
+                        if href and ('/reel/' in href or '/p/' in href):
+                            clean_url = href.split("?")[0]
+                            if clean_url not in post_urls:
+                                post_urls.add(clean_url)
+                                logger.info(f"Found REEL URL ({len(post_urls)}/{max_urls}): {clean_url}")
+                    except Exception:
+                        continue
+                        
+                # Direct reels detection
+                reel_links = driver.find_elements(By.XPATH, "//a[contains(@href, '/reel/')]")
+                for link in reel_links:
+                    href = link.get_attribute('href')
+                    if href:
+                        clean_url = href.split("?")[0]
+                        if clean_url not in post_urls:
+                            post_urls.add(clean_url)
+                            logger.info(f"Found direct REEL URL ({len(post_urls)}/{max_urls}): {clean_url}")
+            except Exception as e:
+                logger.warning(f"Error in reels-specific detection: {e}")
+                
+        # STANDARD POST DETECTION (works for hashtags)
+        # Method 1: Direct link detection
+        links = driver.find_elements(By.TAG_NAME, 'a')
+        for link in links:
+            try:
+                href = link.get_attribute('href')
+                if not href:
+                    continue
+                    
+                # Check if href is a valid post/reel URL 
+                if href and (href.startswith(INSTAGRAM_BASE_URL + "p/") or 
+                         href.startswith(INSTAGRAM_BASE_URL + "reel/") or
+                         "/p/" in href or "/reel/" in href):
+                    # Use regex to confirm it's a content URL
+                    if re.match(r"https://www\.instagram\.com/(p|reel)/[\w-]+/?.*$", href):
+                        # Clean the URL (remove query parameters)
+                        clean_url = href.split("?")[0]
+                        if clean_url not in post_urls:
+                            post_urls.add(clean_url)
+                            logger.info(f"Found URL ({len(post_urls)}/{max_urls}): {clean_url}")
+            except Exception as e:
+                continue  # Skip problematic links
+        
+        # Additional methods as in your original code...
+        # [rest of your URL finding methods here]
+        
+        # If this is a reels page and standard methods aren't finding anything,
+        # try a more aggressive JavaScript approach
+        if is_reels_page and len(post_urls) < current_urls_count + 1:
+            try:
+                # Execute JS to find reels URLs
+                reel_urls = driver.execute_script("""
+                    var links = [];
+                    var elements = document.getElementsByTagName('a');
+                    for (var i = 0; i < elements.length; i++) {
+                        var href = elements[i].getAttribute('href');
+                        if (href && (href.includes('/reel/'))) {
+                            links.push('https://www.instagram.com' + href);
+                        }
+                    }
+                    return links;
+                """)
+                
+                for href in reel_urls:
+                    clean_url = href.split("?")[0]
+                    if clean_url not in post_urls:
+                        post_urls.add(clean_url)
+                        logger.info(f"Found REEL URL via JavaScript ({len(post_urls)}): {clean_url}")
+            except Exception as e:
+                logger.error(f"JavaScript extraction for reels failed: {e}")
+                
+        # Scrolling logic as in your original code...
+        # [rest of your scrolling code here]
+        
         # Scroll down to bottom
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        logger.info(f"Scroll attempt {attempt + 1}/{scroll_attempts}. Pausing for {scroll_pause_time}s...")
+        logger.info(f"Scrolled down. Pausing for {scroll_pause_time}s...")
         time.sleep(scroll_pause_time)
-
-        # Extract links after scrolling
-        links = driver.find_elements(By.TAG_NAME, 'a')
-        found_new_this_scroll = False
-        for link in links:
-            href = link.get_attribute('href')
-            # Check if href is a valid post/reel URL
-            if href and (href.startswith(INSTAGRAM_BASE_URL + "p/") or href.startswith(INSTAGRAM_BASE_URL + "reel/")):
-                # Use regex to be more specific
-                if re.match(r"https://www.instagram.com/(p|reel)/[\w-]+/?$", href):
-                    if href not in post_urls:
-                        post_urls.add(href)
-                        logger.info(f"Found URL ({len(post_urls)}/{max_urls}): {href}")
-                        found_new_this_scroll = True
 
         # Check if target number of URLs reached
         if len(post_urls) >= max_urls:
@@ -502,29 +639,53 @@ def scrape_post_urls_from_feed(driver, page_url, max_urls=50, scroll_attempts=20
 
         # Check if scroll height has changed
         new_height = driver.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            if not found_new_this_scroll:
-                attempts_without_new_content += 1
-                logger.warning(f"Scroll height did not change. Attempt {attempts_without_new_content} without new content.")
-                if attempts_without_new_content >= 3:
-                    logger.warning("Stopping scroll: Page height hasn't changed for several attempts.")
-                    break
-            else:
-                attempts_without_new_content = 0
+        found_new_this_scroll = len(post_urls) > current_urls_count
+        
+        if new_height == last_height and not found_new_this_scroll:
+            attempts_without_new_content += 1
+            logger.warning(f"No new content. Attempt {attempts_without_new_content}/3 without new content.")
+            
+            # For reels pages, try more specialized approaches when stuck
+            if is_reels_page and attempts_without_new_content == 1:
+                logger.info("Trying reels-specific interaction...")
+                try:
+                    # Try clicking to load more or interact with reels interface
+                    driver.execute_script("window.scrollBy(0, -200);")  # Scroll up a bit
+                    time.sleep(1)
+                    # Try to find and click a "Load more" button if it exists
+                    load_buttons = driver.find_elements(By.XPATH, 
+                        "//button[contains(text(), 'Load more') or contains(text(), 'See more')]")
+                    if load_buttons:
+                        load_buttons[0].click()
+                        logger.info("Clicked 'Load more' button")
+                        time.sleep(2)
+                except Exception as e:
+                    logger.warning(f"Reels-specific interaction failed: {e}")
+            
+            # Try an alternative scroll method
+            if attempts_without_new_content == 2:
+                logger.info("Trying alternative scroll method...")
+                driver.execute_script("window.scrollBy(0, -100);")  # Scroll up slightly
+                time.sleep(1)
+                driver.execute_script("window.scrollBy(0, 200);")   # Then scroll down more
+            
+            if attempts_without_new_content >= 3:
+                logger.warning("Stopping scroll: No new content after multiple attempts.")
+                break
         else:
-            attempts_without_new_content = 0
-
+            if found_new_this_scroll:
+                attempts_without_new_content = 0  # Reset counter if we found new URLs
+                
         last_height = new_height
 
-    else:
-        logger.info(f"Finished {scroll_attempts} scroll attempts.")
-
+    # If we didn't find any URLs, try a last-ditch approach
+    # [your existing last-ditch approach code]
+    
     logger.info(f"Found a total of {len(post_urls)} unique post URLs.")
     return list(post_urls)
 
-
 def main():
-    """Main function to run the scraper."""
+    """Main function to run the scraper with improved session handling."""
     driver = None
     scraped_data = []
     try:
@@ -532,20 +693,38 @@ def main():
         if not driver:
             return
 
-        # Try to use saved session first
-        session_valid = False
-        if load_cookies(driver):
-            session_valid = check_login_status(driver)
+        # First check if we're already logged in using just the browser session
+        # (without relying on our cookies file)
+        logger.info("Checking if already logged in via browser session...")
+        driver.get(INSTAGRAM_BASE_URL)
+        time.sleep(3)
+        
+        # Take a screenshot of the initial state
+        try:
+            driver.save_screenshot("initial_state.png")
+        except:
+            pass
             
-        # If session isn't valid, perform normal login
-        if not session_valid:
-            logger.info("No valid session found. Performing standard login...")
-            if not login_instagram(driver, INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD):
-                logger.error("Login failed. Cannot proceed to scrape feed.")
-                return
+        # Check if already logged in
+        is_logged_in = check_login_status(driver)
+        
+        if is_logged_in:
+            logger.info("✓ Already logged in via browser session! Skipping login process.")
         else:
-            logger.info("Using existing session. No need to login again.")
-            
+            # Try to use saved cookies file
+            session_valid = False
+            if load_cookies(driver):
+                session_valid = check_login_status(driver)
+                
+            # If still not logged in, perform standard login
+            if not session_valid:
+                logger.info("No valid session found. Performing standard login...")
+                if not login_instagram(driver, INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD):
+                    logger.error("Login failed. Cannot proceed to scrape feed.")
+                    return
+            else:
+                logger.info("Successfully logged in using saved cookies.")
+        
         # Now proceed with scraping
         time.sleep(SHORT_DELAY)
         post_urls = scrape_post_urls_from_feed(driver,
